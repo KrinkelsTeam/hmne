@@ -171,7 +171,7 @@ RTFFileFilter=Αρχεία κειμένου RTF (*.rtf)|*.rtf
 TextFileFilter=Αρχεία απλού κειμένου (*.txt)|*.txt
 CHMFileFilter=Αρχεία βοήθειας CHM (*.chm)|*.chm
 HelpFileFilter=Αρχεία βοήθειας (*.chm, *.html)|*.chm;*.html
-TeXFileFilter=TeX Files (*.tex)|*.tex
+TeXFileFilter=Αρχεία TeX (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Σφάλμα

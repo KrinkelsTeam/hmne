@@ -1,7 +1,7 @@
-; HM NIS EDIT 2.0b4 ukrainian messages.
+; HM NIS EDIT 2.0b5 ukrainian messages.
 
 ; Translator________: Yuri Holubow [ holubow@ua.fm ]
-; Translator URL____: http://www.nash-soft.com
+; Translator URL____: http://www.nash-soft.org.ua
 ; Translator ICQ UIN: 637147
 
 [Fonts]
@@ -43,13 +43,13 @@ Reopen=Відкрити &заново
 FileSave=З&берегти
 FileSaveAs=Зберегти я&к ...
 FilePrint=&Друк
-FileConfigPrint=Настроки друку
+FileConfigPrint=Настройки друку
 FileExit=&Вихід
 
 ; Edit menu
 EditUndo=&Відміна введення
 EditRedo=&Застосувати
-EditCut=&Вирізувати
+EditCut=&Вирізати
 EditCopy=К&опіювати
 EditCopyAsHTML=Копіювати як HTML
 EditPaste=&Вставити
@@ -120,7 +120,7 @@ HelpAbout=Про програму ...
 URLLink1=Домашня сторінка HM NIS Edit||http://hmne.sourceforge.net/|41
 URLLink2=Офіційний веб-сайт NSIS||http://nsis.sourceforge.net/|41
 URLLink3=Форум по NSIS||http://forums.winamp.com/forumdisplay.php?s=&forumid=65|43
-URLLink4=Українські переклади програм||http://www.nash-soft.com/|41
+URLLink4=Українські переклади програм||http://www.nash-soft.org.ua/|41
 
 ;------------------------------------------------------------------------
 ;------------------------------------------------------------------------
@@ -173,7 +173,7 @@ LicFileFilter=Файл з ліцензією (*.rtf, *.txt)|*.rtf;*.txt
 NSHFileFilter=Файли заголовків NSIS (*.nsh)|*.nsh
 RTFFileFilter=Текст в форматі RTF (*.rtf)|*.rtf
 TextFileFilter=Текстові файли (*.txt)|*.txt
-CHMFileFilter=Файли CHM files (*.chm)|*.chm
+CHMFileFilter=Файли довідки CHM (*.chm)|*.chm
 HelpFileFilter=Файли довідки (*.chm, *.html)|*.chm;*.html
 TeXFileFilter=TeX Files (*.tex)|*.tex
 
