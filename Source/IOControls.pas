@@ -239,7 +239,7 @@ type
   private
     FControlType: String;
     FDisplayText: String;
-    //FOriginalWindowProc: TWndMethod;
+    FOriginalWindowProc: TWndMethod;
 
     DlgLeft, DlgTop, DlgBottom, DlgRight: Integer;
 
@@ -248,7 +248,7 @@ type
     procedure WMWindowPosChanging(var Msg: TWMWindowPosChanged); message  WM_WINDOWPOSCHANGING;
     procedure SetProperties(const Value: TCustomIOControlProperties);
     procedure CreateProperties;
-    //procedure NewWindowProc(var Message: TMessage);
+    procedure NewWindowProc(var Message: TMessage);
   protected
     FControl: TWinControl;
     FUseSpecialBottom, FChangeDisabledColor: Boolean;
@@ -443,8 +443,8 @@ begin
   Height := FControl.Height;
   Width := FControl.Width;
   UpdateControlAlign;
-{  FOriginalWindowProc := FControl.WindowProc;
-  FControl.WindowProc := NewWindowProc;}
+  FOriginalWindowProc := FControl.WindowProc;
+  FControl.WindowProc := NewWindowProc;
 end;
 
 procedure TIOControl.CreateProperties;
@@ -575,13 +575,13 @@ begin
   UpdateDisplay;
 end;
 
-{procedure TIOControl.NewWindowProc(var Message: TMessage);
+procedure TIOControl.NewWindowProc(var Message: TMessage);
 begin
-  if Message.Msg = CM_ENTER then
-    Abort
+  if Message.Msg = WM_NCHITTEST then
+    Message.Result := HTTRANSPARENT
   else
     FOriginalWindowProc(Message);
-end;}
+end;
 
 procedure TIOControl.Paint;
 begin
@@ -823,6 +823,7 @@ begin
   FPropertiesClass := TListProperties;
   inherited Create(AOwner);
   CreateControl(TComboBox);
+  TComboBox(FControl).Style := csDropDownList;
   FUseSpecialBottom := True;
   FControl.Align := alTop;
   Height := 150;
@@ -914,6 +915,9 @@ type
   private
     FButtonWidth: Integer;
     FUpdateSize: Boolean;
+    FEditOriginalWindowProc, FBtnOriginalWindowProc: TWndMethod;
+    procedure NewEditWindowProc(var Message: TMessage);
+    procedure NewBtnWindowProc(var Message: TMessage);
     procedure CMEnabledChanged(var Msg: TMessage); message CM_ENABLEDCHANGED;
   public
     Edit: TMemo;
@@ -940,13 +944,33 @@ begin
   Edit.WordWrap := False;
   Edit.TabStop := False;
   Edit.Height := EditHeight;
+  FEditOriginalWindowProc := Edit.WindowProc;
+  Edit.WindowProc := NewEditWindowProc;
   Button := TButton.Create(Self);
   Button.Parent := Self;
   Button.Caption := '...';
   Button.TabStop := False;
+  FBtnOriginalWindowProc := Button.WindowProc;
+  Button.WindowProc := NewBtnWindowProc;
   Height := Edit.Height;
   Width := Edit.Width + FButtonWidth;
   FUpdateSize := True;
+end;
+
+procedure TRequestPanel.NewBtnWindowProc(var Message: TMessage);
+begin
+  if Message.Msg = WM_NCHITTEST then
+    Message.Result := HTTRANSPARENT
+  else
+    FBtnOriginalWindowProc(Message);
+end;
+
+procedure TRequestPanel.NewEditWindowProc(var Message: TMessage);
+begin
+  if Message.Msg = WM_NCHITTEST then
+    Message.Result := HTTRANSPARENT
+  else
+    FEditOriginalWindowProc(Message);
 end;
 
 procedure TRequestPanel.Resize;

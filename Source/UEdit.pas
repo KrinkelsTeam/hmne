@@ -56,6 +56,7 @@ type
     procedure LogBoxDblClick(Sender: TObject);
     procedure WMMouseLeave(var Msg: TMessage); message CM_MOUSELEAVE;
     procedure WMCopyData(var Msg: TWMCopyData); message WM_COPYDATA;
+    procedure WMTimer(var Msg: TMessage); message WM_TIMER; 
     procedure ShowScriptErrorLine(const ErrorFileName: String;
       ErrorLineNumber: Integer);
     function HintWindowReleaseHandle: Boolean;
@@ -545,6 +546,7 @@ begin
       HintWindow.Color := Application.HintColor;
       HintWindow.Canvas.Font.Assign(Screen.HintFont);
       HintWindow.ActivateHint(Rc, S);
+      SetTimer(Handle, 1, 100, nil);
     end;
   end;
 end;
@@ -659,7 +661,10 @@ function TEditFrm.HintWindowReleaseHandle: Boolean;
 begin
   Result := HintWindow <> nil;
   if Result then
-     HintWindow.ReleaseHandle;
+  begin
+    HintWindow.ReleaseHandle;
+    KillTimer(Handle, 1);
+  end;
 end;
 
 procedure TEditFrm.EditDblClick(Sender: TObject);
@@ -725,6 +730,13 @@ end;
 function TEditFrm.AllowCompile: Boolean;
 begin
   Result := (not IsText) and (not IsHeader) and (not IsCompiling);
+end;
+
+procedure TEditFrm.WMTimer(var Msg: TMessage);
+begin
+  { This should fix bug #858757}
+  if WindowFromPoint(Mouse.CursorPos) <> Edit.Handle then
+    HintWindowReleaseHandle;
 end;
 
 initialization
