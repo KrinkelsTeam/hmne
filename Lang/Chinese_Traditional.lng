@@ -194,6 +194,7 @@ RTFFileFilter=R 富文字檔案 (*.rtf)|*.rtf
 TextFileFilter=P 純文字檔案 (*.txt)|*.txt
 CHMFileFilter=CHM 檔案 (*.chm)|*.chm
 HelpFileFilter=Help 檔案 (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; 訊息對話方塊
 ErrorDlgCaption=錯誤
@@ -454,8 +455,8 @@ DefaultLangInst=English
 DefaultUninstPrompt=你確定要完全移除 [NAME] ，其及所有的元件？
 DefaultUninstSuccesMsg=[NAME] 已成功地從你的電腦移除。
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=移除檔案(&F)
 DeleteGroup=移除群組(&G)

@@ -194,6 +194,7 @@ RTFFileFilter=R 富文本文件 (*.rtf)|*.rtf
 TextFileFilter=P 纯文本文件 (*.txt)|*.txt
 CHMFileFilter=CHM 文件 (*.chm)|*.chm
 HelpFileFilter=Help 文件 (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; 消息对话框
 ErrorDlgCaption=错误
@@ -437,6 +438,7 @@ Compress=压缩演算法(&O):
 CompressBZip2=bzip2
 CompressNone=无
 CompressZLib=zlib
+CompressLZMA=LZMA
 ConfigCaption=配置
 CreateUninstallIcon=在“开始菜单”文件夹创建解除安装图标(&U)
 CreateWebIcon=在“开始菜单”文件夹创建互联网快捷方式(&I)
@@ -454,8 +456,8 @@ DefaultLangInst=English
 DefaultUninstPrompt=你确实要完全移除 [NAME] ，其及所有的组件？
 DefaultUninstSuccesMsg=[NAME] 已成功地从你的计算机移除。
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=删除文件(&F)
 DeleteGroup=移除组(&G)

@@ -177,6 +177,7 @@ RTFFileFilter=Rich Text Dateien (*.rtf)|*.rtf
 TextFileFilter=Textdateien (*.txt)|*.txt
 CHMFileFilter=Kompilierte-HTML-Hilfedateien (*.chm)|*.chm
 HelpFileFilter=Hilfedateien (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Fehler
@@ -426,8 +427,8 @@ DefaultLangInst=English
 DefaultUninstPrompt=Möchten Sie [NAME] und alle seinen Komponenten deinstallieren?
 DefaultUninstSuccesMsg=[NAME] wurde erfolgreich deinstalliert.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=Hauptgruppe
 DeleteFile=Datei löschen
 DeleteGroup=Gruppe löschen

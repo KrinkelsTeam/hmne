@@ -175,7 +175,8 @@ NSHFileFilter=Archivos cabecera de NSIS (*.nsh)|*.nsh
 RTFFileFilter=Texto enriquecido (*.rtf)|*.rtf
 TextFileFilter=Texto plano (*.txt)|*.txt
 CHMFileFilter=Archivos CHM (*.chm)|*.chm
-HelpFileFilter=archivos de ayuda (*.chm, *.html)|*.chm;*.html
+HelpFileFilter=Archivos de ayuda (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=Archivos TeX (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Error
@@ -428,8 +429,8 @@ DefaultLangInst=Spanish
 DefaultUninstPrompt=¿Está completamente seguro que desea desinstalar [NAME] junto con todos sus componentes?
 DefaultUninstSuccesMsg=La desinstalación de [NAME] finalizó satisfactoriamente.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\ruta\al\archivo\EjecutablePrincipal.exe|$INSTDIR;c:\ruta\al\archivo\Archivo.ejemplo|$INSTDIR
+DefaultWizardLicFile=c:\ruta\ala\licencia\TuLicenciaDeSoftware.txt
 DefaultWizardSections=Principal
 DeleteFile=Eli&minar archivo
 DeleteGroup=Eliminar grupo

@@ -177,6 +177,7 @@ RTFFileFilter=Formát RTF (*.rtf)|*.rtf
 TextFileFilter=Textové dokumenty (*.txt)|*.txt
 CHMFileFilter=CHM soubory (*.chm)|*.chm
 HelpFileFilter=Soubory nápovìdy (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Chyba
@@ -429,8 +430,8 @@ DefaultLangInst=Czech
 DefaultUninstPrompt=Opravdu si pøejete úplnì odstranit [NAME] a všechny jeho komponenty?
 DefaultUninstSuccesMsg=[NAME] byl úspìšnì odstranìn z vašeho poèítaèe.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=Odt&ranit soubor
 DeleteGroup=Odstranit skupinu

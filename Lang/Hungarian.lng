@@ -176,6 +176,9 @@ LicFileFilter=Licenc fájlok (*.rtf, *.txt)|*.rtf;*.txt
 NSHFileFilter=NSIS fejléc fájlok (*.nsh)|*.nsh
 RTFFileFilter=RichText fájlok (*.rtf)|*.rtf
 TextFileFilter=Egyszerû szövegfájlok (*.txt)|*.txt
+CHMFileFilter=CHM files (*.chm)|*.chm
+HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Hiba
@@ -422,8 +425,8 @@ DefaultLangInst=Hungarian
 DefaultUninstPrompt=Biztosan teljesen el szeretné távolítani a(z) [NAME]-t és az annak összes összetevõjét?
 DefaultUninstSuccesMsg=A(z) [NAME] sikeresen el lett távolítva a számítógépérõl.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=&Fájl eltávolítása
 DeleteGroup=Csoport eltávolítása

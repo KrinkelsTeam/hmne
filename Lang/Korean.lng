@@ -178,6 +178,7 @@ RTFFileFilter=RTF 파일 (*.rtf)|*.rtf
 TextFileFilter=텍스트 파일 (*.txt)|*.txt
 n_CHMFileFilter=CHM files (*.chm)|*.chm
 n_HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+n_TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=오류
@@ -438,8 +439,8 @@ DefaultLangInst=Korean
 DefaultUninstPrompt=[NAME]을(를) 제거하시겠습니까?
 DefaultUninstSuccesMsg=[NAME]는(은) 완전히 제거되었습니다.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=파일 제거(&R)
 DeleteGroup=그룹 제거

@@ -171,6 +171,7 @@ RTFFileFilter=Αρχεία κειμένου RTF (*.rtf)|*.rtf
 TextFileFilter=Αρχεία απλού κειμένου (*.txt)|*.txt
 CHMFileFilter=Αρχεία βοήθειας CHM (*.chm)|*.chm
 HelpFileFilter=Αρχεία βοήθειας (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Σφάλμα
@@ -422,8 +423,8 @@ DefaultLangInst=Greek
 DefaultUninstPrompt=Είστε σίγουροι πως θέλετε να αφαιρέσετε εντελώς το [NAME] και όλα τα στοιχεία του;
 DefaultUninstSuccesMsg=Το [NAME] απεγκαταστάθηκε επιτυχώς από τον υπολογιστή σας.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=&Αφαίρεση αρχείου
 DeleteGroup=Αφαίρεση ομάδας

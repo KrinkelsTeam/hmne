@@ -176,6 +176,7 @@ RTFFileFilter=Files rich text (*.rtf)|*.rtf
 TextFileFilter=Files di testo (*.txt)|*.txt
 CHMFileFilter=Files CHM (*.chm)|*.chm
 HelpFileFilter=Files dell'help (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Errore
@@ -426,8 +427,8 @@ DefaultLangInst=English
 DefaultUninstPrompt=Sei sicuro di voler completamente rimuovere [NAME] e tutti i suoi componenti?
 DefaultUninstSuccesMsg=[NAME] è stato completamente rimosso dal tuo computer.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=SezionePrincipale
 DeleteFile=&Rimuovi file
 DeleteGroup=Rimuovi gruppo

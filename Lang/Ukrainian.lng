@@ -175,6 +175,7 @@ RTFFileFilter=Текст в форматі RTF (*.rtf)|*.rtf
 TextFileFilter=Текстові файли (*.txt)|*.txt
 CHMFileFilter=Файли CHM files (*.chm)|*.chm
 HelpFileFilter=Файли довідки (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Помилка
@@ -425,8 +426,8 @@ DefaultLangInst=Ukrainian
 DefaultUninstPrompt=Ви упевнені, в том, що бажаєте видалити [NAME] і всі його компоненти?
 DefaultUninstSuccesMsg=Видалення програми [NAME] було успішне завершено.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=MainSection
 DeleteFile=&Видалити файл
 DeleteGroup=Видалити групу

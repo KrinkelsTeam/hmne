@@ -179,6 +179,7 @@ RTFFileFilter=Pliki Rich text (*.rtf)|*.rtf
 TextFileFilter=Pliki tekstowe (*.txt)|*.txt
 n_CHMFileFilter=CHM files (*.chm)|*.chm
 n_HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+n_TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=B³¹d
@@ -430,8 +431,8 @@ DefaultLangInst=Polish
 DefaultUninstPrompt=Czy na pewno chcesz usun¹æ program [NAME] i wszystkie jego komponenty?
 DefaultUninstSuccesMsg=Program [NAME] zosta³ pomyœlnie usuniêty.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
-DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
+DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
 DefaultWizardSections=GrupaGlowna
 DeleteFile=&Usuñ plik
 DeleteGroup=Usuñ grupê
