@@ -2710,7 +2710,7 @@ begin
     Options.BrowserHome := ReadString('Options', 'BrowserHome',
       'http://forums.winamp.com/forumdisplay.php?s=&forumid=65');
 
-    Options.UseDefBrowser := ReadBool('Options', 'UseDefBrowser', False);
+    Options.UseDefBrowser := ReadBool('Options', 'UseDefBrowser', True);
     Options.IOShowGrid := ReadBool('Options', 'IOShowGrid', True);
     Options.IOSnapToGrid := ReadBool('Options', 'IOSnapToGrid', False);
     Options.ShowIODimsKind := TShowIODimsKind(ReadInteger('Options', 'ShowIODimsKind', 0));
@@ -2910,10 +2910,10 @@ begin
         if Form.SynEdit <> nil then
           with Form.SynEdit do
           begin
+            CaretY := StrToIntDef(ExtractStr(Value, ','), 1);
+            CaretX := StrToIntDef(ExtractStr(Value, ','), 1);
             LeftChar := StrToIntDef(ExtractStr(Value, ','), 1);
             TopLine := StrToIntDef(ExtractStr(Value, ','), 1);
-            CaretX := StrToIntDef(ExtractStr(Value, ','), 1);
-            CaretY := StrToIntDef(ExtractStr(Value, ','), 1);
           end;
       except
         Application.HandleException(Self);
@@ -2948,7 +2948,7 @@ begin
           Value := BinToText(WindowPlacement, WindowPlacement.length);
           if SynEdit <> nil then
             with SynEdit do
-              Value := Value + Format(',%d,%d,%d,%d', [LeftChar, TopLine, CaretX, CaretY]);
+              Value := Value + Format(',%d,%d,%d,%d', [CaretY, CaretX, LeftChar, TopLine]);
           IniFile.WriteString('OpenedFiles', FileName, Value);
         end;
 end;
