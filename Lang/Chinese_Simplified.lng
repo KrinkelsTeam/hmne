@@ -1,11 +1,8 @@
-; Translation made with Translator 1.32 (http://www2.arnes.si/~sopjsimo/translator.html)
-; $Translator:NL=%n:TB=%t
-;
-; HM NIS EDIT 2.0b4 Chinese (Simplified) messages.
+; HM NIS EDIT 2.0b5 Chinese (Simplified) messages.
 
 ; Translator: Kii Ali <kiiali@cpatch.org>
 ; Translator URL: http://cpatch.org/kiiali/
-; Modified date: 2003-11-19
+; Modified date: 2003-12-23
 
 [Fonts]
 DialogFontName=宋体
@@ -62,7 +59,7 @@ EditSelectAll=选择全部(&S)|Ctrl+A|选择整个脚本
 
 ; Search menu
 ; 搜索菜单
-EditFind=查找(&I)|Ctrl+F|在活动脚本搜索文字
+EditFind=查找(&I)|Ctrl+F|在活动脚本搜索文本
 EditFindNext=查找下一个(&F)|F3|查找下一个搜索字符串的位置
 EditReplace=替换(&R)|Ctrl+R|替换搜索的字符串
 SearchGotoLine=前往行号(&G)|F2|前往指定的行号
@@ -79,7 +76,7 @@ ViewIOPanel=Install Option 控件(&I)|F6|显示/隐藏 Install Option 窗格
 ViewStatusBar=状态栏(&S)|F7|显示/隐藏 状态栏
 ViewLogBox=日志窗格(&L)|F8|显示/隐藏 日志窗格
 ViewSpecialChars=特别字符(&P)|F10|使用特别符号显示断行、空格与定格字符
-IOToggleDesignMode=切换设计模式(&D)|F12|在 InstallOption 页面，在设计模式或编辑文字两者之间切换
+IOToggleDesignMode=切换设计模式(&D)|F12|在 InstallOption 页面，在设计模式或编辑文本两者之间切换
 ViewOptions=选项(&O)...|F11|显示配置对话框
 
 ; Format menu
@@ -195,8 +192,8 @@ LicFileFilter=L 授权文件 (*.rtf, *.txt)|*.rtf;*.txt
 NSHFileFilter=NSIS 标头文件 (*.nsh)|*.nsh
 RTFFileFilter=R 富文本文件 (*.rtf)|*.rtf
 TextFileFilter=P 纯文本文件 (*.txt)|*.txt
-n_CHMFileFilter=CHM files (*.chm)|*.chm
-n_HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+CHMFileFilter=CHM 文件 (*.chm)|*.chm
+HelpFileFilter=Help 文件 (*.chm, *.html)|*.chm;*.html
 
 ; 消息对话框
 ErrorDlgCaption=错误
@@ -219,21 +216,21 @@ AboutBoxCaption=关于
 
 ; Find Window
 ; 查找窗口
-FindTextCaption=搜索文字
-FindText=要查找的文字(&F):
+FindTextCaption=搜索文本
+FindText=要查找的文本(&F):
 SearchOptions=选项
 CaseSensitive=分辨大小写(&C)
 WholeWordOnly=仅完整单词(&W)
 SearchFromCursor=从光标处搜索(&H)
-SearchSelectedOnly=限选择区文字(&S)
+SearchSelectedOnly=限选择区文本(&S)
 Direction=方向
 Forward=往前(&F)
 Backward=往后(&B)
 
 ; Replace Window
 ; 替换窗口
-ReplaceTextCaption=替换文字
-ReplaceText=要替换的文字(&T):
+ReplaceTextCaption=替换文本
+ReplaceText=要替换的文本(&T):
 ReplaceAll=替换全部(&A)
 
 ; Goto line Window
@@ -250,21 +247,21 @@ PluginsConfigPage=插件
 
 ; 选项窗口 环境配置页面
 GeneralOptions=常规选项
-n_ShowSplashScreen=Show splash screen
+ShowSplashScreen=显示版权屏幕(&P)
 ShowWelcomeDialog=显示欢迎窗口(&W)
 MultipleInstances=多重实例方式运行(&I)
 OpenIniFilesIn=在设计模式打开 .ini 文件(&D)
-n_OpenFilesOnStartup=Open last used files on startup
-n_UseDefBrowser=Use default browser
+OpenFilesOnStartup=程序启动时打开最后使用的文件(&U)
+UseDefBrowser=使用默认浏览器(&B)
 Lang=语言(&L):
 BrowserHome=浏览器主页(&H):
 ToolBarOptions=工具栏选项
 TBSmoothDrag=平滑拖放于工具栏(&B)
 PanelSmoothDrag=平滑拖放于工具控制面板(&P)
 TBTheme=工具栏布景主题(&T):
-n_Default=Default
-n_OfficeXP=OfficeXP
-n_Stripes=Stripes
+Default=浮动 (默认)
+OfficeXP=浮动 (OfficeXP)
+Stripes=条状底纹
 FileAssoc=文件关联
 DefaultEditor=注册为默认 NSIS 文件的编辑器(&R)
 SuccessfullyRegister=NIS Edit 已成功地注册为默认编辑器。
@@ -308,7 +305,7 @@ EditorFont=编辑器字体
 
 ; 选项窗口 编辑器选项页面
 AutoIndent=自动缩进(&A)|将自动缩进光标处的新行，并与先前一行，有相同的前导空白空格。
-DragAndDropEditing=拖放编辑(&D)|允许你选择文字列块，并在文件中拖放到另一个位置。
+DragAndDropEditing=拖放编辑(&D)|允许你选择文本列块，并在文件中拖放到另一个位置。
 HalfPageScroll=半页滚动(&H)|当使用 PgUp 与 PgDn 命令滚动时，一次只滚动半页。
 ScrollByOneLess=滚动一行(&O)|强制只滚动一行
 ScrollPastEOF=滚动通过 EOF 标记(&F)|允许光标通过 文件终结(EOF) 标记
@@ -342,7 +339,7 @@ Block=列块
 ; 选项窗口 编辑器高亮页面
 UseHighlighter=使用语法高亮(&U)
 Element=元素(&E):
-TextAttri=文字属性
+TextAttri=文本属性
 Color=颜色(&C):
 Foreground=前景(&F)
 Background=背景(&G)
@@ -410,7 +407,7 @@ NoDocs=在显示 NSIS 文件之前，请选择 NSIS 帮助文件。
 OpenFileError=不能打开文件 %s 。
 NoCloseCompiling=当编译脚本时，无法退出应用程序。
 Untitled=Untitled%.2d
-EditTextCaption=编辑文字
+EditTextCaption=编辑文本
 EditListitemsCaption=编辑列表项目
 
 
@@ -440,7 +437,6 @@ Compress=压缩演算法(&O):
 CompressBZip2=bzip2
 CompressNone=无
 CompressZLib=zlib
-CompressLZMA=LZMA
 ConfigCaption=配置
 CreateUninstallIcon=在“开始菜单”文件夹创建解除安装图标(&U)
 CreateWebIcon=在“开始菜单”文件夹创建互联网快捷方式(&I)
@@ -474,7 +470,7 @@ ExecFinishSubTitle=请指定当安装程序完成时要运行的动作。
 ExecFinishTitle=安装程序之后运行 (7/9)
 ExecProgram=程序(&P):
 ExecProgramParams=参数(&A):
-ExecReadme=读我(&R):
+ExecReadme=自述(&R):
 ExitWizardPrompt=NSIS 脚本向导并未完成。如果你现在退出，新脚本文件将不会产生。$nl$nl要退出 NSIS 脚本向导吗？
 FinishLabel1=向导已完成
 FinishLabel2=你已成功地完成向导。
@@ -502,6 +498,7 @@ ModifyName=更改名称
 ModifyNamePrompt=写入组名称:
 NewFile=新建文件
 NewFileCaption=新建文件
+NewGroup=新建组
 NewGroup=新建组
 NewGroupPrompt=写入并命名组(G):
 NoAppName=请指定应用程序名称。

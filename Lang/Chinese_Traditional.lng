@@ -1,11 +1,8 @@
-; Translation made with Translator 1.32 (http://www2.arnes.si/~sopjsimo/translator.html)
-; $Translator:NL=%n:TB=%t
-;
-; HM NIS EDIT 2.0b4 Chinese (Traditional) messages.
+; HM NIS EDIT 2.0b5 Chinese (Traditional) messages.
 
 ; Translator: Kii Ali <kiiali@cpatch.org>
 ; Translator URL: http://cpatch.org/kiiali/
-; Modified date: 2003-11-19
+; Modified date: 2003-12-23
 
 [Fonts]
 DialogFontName=新細明體
@@ -195,8 +192,8 @@ LicFileFilter=L 授權檔案 (*.rtf, *.txt)|*.rtf;*.txt
 NSHFileFilter=NSIS 標頭檔案 (*.nsh)|*.nsh
 RTFFileFilter=R 富文字檔案 (*.rtf)|*.rtf
 TextFileFilter=P 純文字檔案 (*.txt)|*.txt
-n_CHMFileFilter=CHM files (*.chm)|*.chm
-n_HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+CHMFileFilter=CHM 檔案 (*.chm)|*.chm
+HelpFileFilter=Help 檔案 (*.chm, *.html)|*.chm;*.html
 
 ; 訊息對話方塊
 ErrorDlgCaption=錯誤
@@ -250,21 +247,21 @@ PluginsConfigPage=插件
 
 ; 選項視窗 環境組態頁面
 GeneralOptions=一般選項
-n_ShowSplashScreen=Show splash screen
+ShowSplashScreen=顯示版權螢幕(&P)
 ShowWelcomeDialog=顯示歡迎視窗(&W)
 MultipleInstances=多重實例方式執行(&I)
 OpenIniFilesIn=在設計模式開啟 .ini 檔案(&D)
-n_OpenFilesOnStartup=Open last used files on startup
-n_UseDefBrowser=Use default browser
+OpenFilesOnStartup=程式啟動時開啟最後使用的檔案(&U)
+UseDefBrowser=使用預設瀏覽器(&B)
 Lang=語言(&L):
 BrowserHome=瀏覽器首頁(&H):
 ToolBarOptions=工具列選項
 TBSmoothDrag=平滑拖曳於工具列(&B)
 PanelSmoothDrag=平滑拖曳於工具控制面板(&P)
 TBTheme=工具列佈景主題(&T):
-n_Default=Default
-n_OfficeXP=OfficeXP
-n_Stripes=Stripes
+Default=浮動 (預設)
+OfficeXP=浮動 (OfficeXP)
+Stripes=條狀底紋
 FileAssoc=檔案關聯
 DefaultEditor=註冊為預設 NSIS 檔案的編輯器(&R)
 SuccessfullyRegister=NIS Edit 已成功地註冊為預設編輯器。
@@ -440,7 +437,6 @@ Compress=壓縮演算法(&O):
 CompressBZip2=bzip2
 CompressNone=無
 CompressZLib=zlib
-CompressLZMA=LZMA
 ConfigCaption=組態
 CreateUninstallIcon=在「開始選單」資料夾建立解除安裝圖示(&U)
 CreateWebIcon=在「開始選單」資料夾建立網際網路捷徑(&I)
@@ -502,6 +498,7 @@ ModifyName=變更名稱
 ModifyNamePrompt=寫入群組名稱:
 NewFile=新增檔案
 NewFileCaption=新增檔案
+NewGroup=新增群組
 NewGroup=新增群組
 NewGroupPrompt=寫入並命名群組(G):
 NoAppName=請指定應用程式名稱。

@@ -177,6 +177,7 @@ RTFFileFilter=Rich text files (*.rtf)|*.rtf
 TextFileFilter=Plain text files (*.txt)|*.txt
 CHMFileFilter=CHM files (*.chm)|*.chm
 HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX Files (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Error

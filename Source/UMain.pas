@@ -17,7 +17,7 @@ uses
   Registry, SynHighlighterIni, TB2ExtItems, MyAutoCompleteList, TBX,
   TBXExtItems, TBXMDI, TBXDkPanels, TBXOfficeXPTheme, TBXStripesTheme,
   ZPropLst, UIODesigner, DsgnIntf, UCustomMDIChild, MySynEditorOptionsContainer,
-  OleCtrls, SHDocVw, TBXStatusBars, PluginsInt, TBXThemes, RTDesign;
+  OleCtrls, SHDocVw, TBXStatusBars, PluginsInt, TBXThemes, RTDesign, SynExportTex;
 
 const
   WM_SHOWSTARTUPFRM = WM_USER + $1002;
@@ -423,7 +423,7 @@ type
     procedure CMRWindowCmdUpdate(Sender: TObject);
   private
     FirstTimeShowbrowser, NoLoadFileList, NoStartup, FUseHighLighter: Boolean;
-    FExtencions: array[1..4] of String;
+    FExtencions: array[1..5] of String;
     AutoCompleteListModified: Boolean;
     FLastUsedWindow, WinListActionForm: TCustomMDIChild;
 
@@ -2298,7 +2298,7 @@ procedure TMainFrm.SaveAsMDIChild(MDIChild: TCustomMDIChild);
 const
   Exts: array[Boolean] of String = ('nsi', 'ini');
 var
-  Filters: array[1..3] of String;
+  Filters: array[1..4] of String;
   AlreadySaved: Boolean;
 begin
   FillChar(Filters, SizeOf(Filters), #0);
@@ -2319,8 +2319,10 @@ begin
     begin
       Filters[2] := 'HTMLFileFilter';
       Filters[3] := 'RTFFileFilter';
+      Filters[4] := 'TeXFileFilter';
       FExtencions[2] := 'htm';
       FExtencions[3] := 'rtf';
+      FExtencions[4] := 'tex';
     end;
   end else
   if MDIChild is TEditFrm then
@@ -2332,8 +2334,10 @@ begin
     begin
       Filters[2] := 'HTMLFileFilter';
       Filters[3] := 'RTFFileFilter';
+      Filters[4] := 'TeXFileFilter';
       FExtencions[2] := 'htm';
       FExtencions[3] := 'rtf';
+      FExtencions[4] := 'tex';
     end else
     begin
       Filters[2] := 'NSHFileFilter';
@@ -2351,13 +2355,17 @@ begin
     if not AlreadySaved then
       MDIChild.SaveFile(SaveDlg.FileName) else
     case SaveDlg.FilterIndex of
-      1, 4: MDIChild.SaveFile(SaveDlg.FileName);
+      1, 5: MDIChild.SaveFile(SaveDlg.FileName);
       2: if MDIChild.SynEdit <> nil then
             SynEditExportLines(MDIChild.SynEdit, TSynExporterHTML, SaveDlg.FileName)
          else
            MDIChild.SaveFile(SaveDlg.FileName);
       3: if MDIChild.SynEdit <> nil then
            SynEditExportLines(MDIChild.SynEdit, TSynExporterRTF, SaveDlg.FileName)
+         else
+           MDIChild.SaveFile(SaveDlg.FileName);
+      4: if MDIChild.SynEdit <> nil then
+           SynEditExportLines(MDIChild.SynEdit, TSynExporterTex, SaveDlg.FileName)
          else
            MDIChild.SaveFile(SaveDlg.FileName);
     end;
