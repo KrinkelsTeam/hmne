@@ -17,7 +17,8 @@ uses
   Registry, SynHighlighterIni, TB2ExtItems, MyAutoCompleteList, TBX,
   TBXExtItems, TBXMDI, TBXDkPanels, TBXOfficeXPTheme, TBXStripesTheme,
   ZPropLst, UIODesigner, DsgnIntf, UCustomMDIChild, MySynEditorOptionsContainer,
-  OleCtrls, SHDocVw, TBXStatusBars, PluginsInt, TBXThemes, RTDesign, SynExportTex;
+  OleCtrls, SHDocVw, TBXStatusBars, PluginsInt, TBXThemes, RTDesign, SynExportTex,
+  SynEditMiscClasses, SynEditSearch;
 
 const
   WM_SHOWSTARTUPFRM = WM_USER + $1002;
@@ -326,6 +327,7 @@ type
     CMRWindowCmd: TAction;
     wmSMUItem: TTBXItem;
     hmURLGroupItem: TTBGroupItem;
+    SynEditSearchEngine: TSynEditSearch;
     procedure NewScriptCmdExecute(Sender: TObject);
     procedure OpenFileCmdExecute(Sender: TObject);
     procedure SaveFileCmdUpdate(Sender: TObject);

@@ -640,18 +640,16 @@ var
   begin
     GetKeyValue(S, Desc);
     GetKeyValue(S + '\DefaultIcon', ParamStr(0)+',1');
-    SetKeyValue(S + '\Shell', 'HMNISEdit');
-    GetKeyValue(S + '\Shell\HMNISEdit', 'Edit with HM NIS Edit');
-    SetKeyValue(S + '\Shell\HMNISEdit\Command', ParamStr(0) + ' "%1"');
+    SetKeyValue(S + '\Shell\open\Command', ParamStr(0) + ' "%1"');
   end;
 
 begin
   Reg := TRegistry.Create;
   try
     Reg.RootKey := HKEY_CLASSES_ROOT;
-    S := GetKeyValue('.nsi', 'NSISFile');
+    S := GetKeyValue('.nsi', 'NSIS.Script');
     SetAsosiation('NSIS Script File');
-    S := GetKeyValue('.nsh', 'NSHFile');
+    S := GetKeyValue('.nsh', 'NSIS.Header');
     SetAsosiation('NSIS Header File');
     SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, nil, nil);
   finally

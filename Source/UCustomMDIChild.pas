@@ -225,7 +225,13 @@ begin
   FNode.ImageIndex := GetIconIndex;
   FNode.SelectedIndex := FNode.ImageIndex;
   FNode.Text := Caption;
-  if GetSynEdit <> nil then GetSynEdit.ReadOnly := FReadOnly;
+  if GetSynEdit <> nil then
+  with GetSynEdit do
+  begin
+    ReadOnly := FReadOnly;
+    if SearchEngine = nil then
+      SearchEngine := MainFrm.SynEditSearchEngine;
+  end;
   ChangeCurDir;
 end;
 
