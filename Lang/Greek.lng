@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 greek messages.
+; $Id$
 
 ; Translator: Makidis N. Michael
 ; Translator URL: http://dias.aueb.gr/~p3010094/
@@ -86,6 +87,7 @@ ToolsEditCodeTemplate=&Επεξεργασία προτύπων κώδικα
 ; NSIS menu
 NSISCompil=&Μεταγλώττιση αρχείου|Ctrl+F9|Μεταγλώττιση του ενεργού αρχείου
 NSISCompilRun=Με&ταγλώττιση και Εκτέλεση|Shift+F9|Μεταγλώττιση και εκτέλεση του ενεργού αρχείου
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Εκτέλεση|F9|Εκτέλεση του ενεργού αρχείου
 NSISConfig=&Ρυθμίσεις|Ctrl+F11|Αλλαγή της διαδρομής μεταγλώττισης, ορισμός συμβόλων και ρύθμιση επιλογών του μεταγλωττιστή
 
@@ -160,7 +162,7 @@ Down=&Κάτω
 
 ; File filters
 AllFileFilter=Όλα τα αρχεία (*.*)|*.*
-NSISFileFilter=Αρχεία του NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Αρχεία του NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Εκτελέσιμα αρχεία (*.exe)|*.exe
 HTMLFileFilter=Αρχεία HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Αρχεία του Install options (*.ini)|*.ini
@@ -373,10 +375,12 @@ FileModified=Μία άλλη εφαρμογή έκανε αλλαγές στο αρχείο "%s". Να ξαναφορτωθεί;
 NoCompiler=Πριν τη μεταγλώττιση του αρχείου αυτού παρακαλώ εισάγετε τη θέση του μεταγλωττιστή NSIS
 NoDocs=Πριν την εμφάνιση της τεκμηρίωσης του NSIS παρακαλώ εισάγετε τη θέση των αρχείων βοήθειας του NSIS
 OpenFileError=Αδυναμία ανοίγματος του αρχείου %s
-NoCloseCompiling=Αδυναμία εξόδου κατά τη μεταγλώττιση αρχείων
+NoCloseCompiling=Αδυναμία εξόδου κατά τη μεταγλώττιση αρχείων$nlDo you want to stop the compiler?
 Untitled=Ανώνυμο %.2d
 EditTextCaption=Επεξεργασία κειμένου
 EditListitemsCaption=Επεξεργασία στοιχείων λίστας
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

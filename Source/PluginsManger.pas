@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
-  Plugins management 
+  Plugins management
+
+  $Id$
 
 }
 unit PluginsManger;
@@ -257,6 +259,9 @@ begin
                               if Frm <> nil then
                                 Result := Frm.Handle;
                             end;
+
+      EC_FILE_GET_CURRENT_FILENAME:
+         Result := StrLen(StrCopy(PChar(Param1), PChar(MainFrm.CurMDIChild.FileName)));
 
       // Misc commands
       EC_GOTOURL: MainFrm.GotoURL(PChar(Param1));

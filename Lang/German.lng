@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b4 german messages.
+; $Id$
 
 ; Translator: Brummelchen
 ; Translator: Dipl.-Ing. Robert Kehl, http://roknet.de/
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=Code-Vorlagen bearbeiten
 ; NSIS menu
 NSISCompil=&Kompiliere Skript
 NSISCompilRun=Kompiliere und &Starte|Shift+F9|Kompiliere das aktive Skript und starte es danach.
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=.exe &ausführen
 NSISConfig=&Einstellungen für NSIS
 
@@ -166,7 +168,7 @@ Down=R&unter
 
 ; File filters
 AllFileFilter=Alle Dateien (*.*)|*.*
-NSISFileFilter=NSIS Dateien (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=NSIS Dateien (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Ausführbare Dateien (*.exe)|*.exe
 HTMLFileFilter=HTML Dateien (*.htm, *.html)|*.htm;*.html
 INIFileFilter=InstallOptions Datei (*.ini)|*.ini
@@ -377,10 +379,12 @@ FileModified=Eine andere Anwendung hat "%s" geändert. Möchten Sie diese Datei ne
 NoCompiler=Bitte wählen Sie den NSIS Kompiler
 NoDocs=Bitte wählen Sie die NSIS Hilfedatei
 OpenFileError=Konnte Datei "%s" nicht öffnen
-NoCloseCompiling=Während des Kompilierens kann der Kompiler nicht beendet werden
+NoCloseCompiling=Während des Kompilierens kann der Kompiler nicht beendet werden$nlDo you want to stop the compiler?
 Untitled=Unbenannt %.2d
 EditTextCaption=Bearbeite Text
 EditListitemsCaption=Bearbeite Listeneinträge
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

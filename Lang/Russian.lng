@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b4 russian messages.
+; $Id$
 
 ; Translator: Sergey "Timon" Kusnetsov [ timon@front.ru  ] + 20031123
 ; Translator URL:                      [ NOT AVIABLE NOW ]
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=&Редактировать шаблоны
 ; NSIS menu
 NSISCompil=&Компилировать сценарий|Ctrl+F9|Компилировать актуальный сценарий
 NSISCompilRun=К&омпилировать и запустить|Shift+F9|Компилировать и запустить на исполнение акутальный сцнарий
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Запустить установку|F9|Запустить на исполнение активный сценарий
 NSISConfig=&Конфигурация|Ctrl+F11|Изменить путь до компилятора, символьных библиотек и настроить
 
@@ -166,7 +168,7 @@ Down=&Вниз
 
 ; File filters
 AllFileFilter=Все файлы (*.*)|*.*
-NSISFileFilter=Файлы NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Файлы NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Исполняемые файлы (*.exe)|*.exe
 HTMLFileFilter=Файлы HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Файл настроек установки (*.ini)|*.ini
@@ -380,10 +382,12 @@ FileModified=Файл "%s" был обновлён извне. Перезагрузить его?
 NoCompiler=Перед компиляцией сценария выберите компилятор NSIS
 NoDocs=Перед тем, как знакомиться с расиренной документацией на NSIS, просмотрите файл помощи по NSIS
 OpenFileError=Невозможно открыть файл %s
-NoCloseCompiling=В то время пока компилируется сценарий выход невозможен
+NoCloseCompiling=В то время пока компилируется сценарий выход невозможен$nlDo you want to stop the compiler?
 Untitled=Без_названия %.2d
 EditTextCaption=Редактирование текста
 EditListitemsCaption=Редактировать список
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

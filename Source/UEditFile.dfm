@@ -35,7 +35,7 @@ object EditFileFrm: TEditFileFrm
   object OrigenEdt: TEdit
     Left = 0
     Top = 16
-    Width = 313
+    Width = 307
     Height = 21
     TabOrder = 0
   end

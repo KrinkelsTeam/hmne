@@ -86,6 +86,7 @@ object EditFrm: TEditFrm
     Font.Style = []
     ParentColor = True
     ParentFont = False
+    PlainText = True
     PopupMenu = MainFrm.EditPopup
     ReadOnly = True
     ScrollBars = ssBoth

@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Wizard Form code
+
+  $Id$
 
 }
 unit UWizard;
@@ -1058,7 +1060,8 @@ begin
     for I := 0 to Files.Count - 1 do
     begin
       S := GetDestDir(Files[I]);
-      if (S <> '') and (Lst.IndexOf(S) < 0) then Lst.Add(S);
+      if (S <> '') and (Pos(S, SDirs + SShortCutDirs) = 0) and
+        (Lst.IndexOf(S) < 0) then Lst.Add(S);
     end;
     AddDefaultStrings(Lst, SDirs);
   finally
@@ -1076,7 +1079,8 @@ begin
     for C := 0 to IconLst.Items.Count - 1 do
     begin
       S := ExtractFileDir(IconLst.Items[C].Caption);
-      if (S <> '') and (Lst.IndexOf(S) < 0) then Lst.Add(S);
+      if (S <> '') and (Pos(S, SShortCutDirs) = 0) and
+        (Lst.IndexOf(S) < 0) then Lst.Add(S);
     end;
     AddDefaultStrings(Lst, SShortCutDirs);
   finally

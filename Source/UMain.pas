@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Main form code
+
+  $Id$
 
 }
 unit UMain;
@@ -328,6 +330,13 @@ type
     wmSMUItem: TTBXItem;
     hmURLGroupItem: TTBGroupItem;
     SynEditSearchEngine: TSynEditSearch;
+    StopCompileCmd: TAction;
+    ntbSeparator1: TTBXSeparatorItem;
+    ntbStopCompItem: TTBXItem;
+    nmSeparator2: TTBXSeparatorItem;
+    nmStopCompItem: TTBXItem;
+    TBXSeparatorItem4: TTBXSeparatorItem;
+    SaveLogItem: TTBXItem;
     procedure NewScriptCmdExecute(Sender: TObject);
     procedure OpenFileCmdExecute(Sender: TObject);
     procedure SaveFileCmdUpdate(Sender: TObject);
@@ -423,6 +432,9 @@ type
     procedure DesignMenuPopup(Sender: TObject);
     procedure CMRWindowCmdExecute(Sender: TObject);
     procedure CMRWindowCmdUpdate(Sender: TObject);
+    procedure StopCompileCmdUpdate(Sender: TObject);
+    procedure StopCompileCmdExecute(Sender: TObject);
+    procedure SaveLogItemClick(Sender: TObject);
   private
     FirstTimeShowbrowser, NoLoadFileList, NoStartup, FUseHighLighter: Boolean;
     FExtencions: array[1..5] of String;
@@ -597,7 +609,7 @@ var
   C: Integer;
 begin
   OpenDlg.FileName := '';
-  OpenDlg.Filter := GetLangFileFilter(['NSISFileFilter', 'INIFileFilter']);
+  OpenDlg.Filter := GetLangFileFilter(['NSISFileFilter', 'NSHFileFilter', 'INIFileFilter']);
   OpenDlg.Title := LangStr('OpenScriptCaption');
   if OpenDlg.Execute then
   begin
@@ -1224,6 +1236,7 @@ begin
 
   AssignActionText(CompScriptCmd, 'NSISCompil');
   AssignActionText(CompRunCmd, 'NSISCompilRun');
+  AssignActionText(StopCompileCmd, 'NSISStopCompile');
   AssignActionText(RunInstallerCmd, 'NSISExec');
   AssignActionText(ConfigCmd, 'NSISConfig');
 
@@ -1270,6 +1283,7 @@ begin
   RunWinCmd.Caption := RunInstallerCmd.Caption;
   SaveWinCmd.Caption := SaveFileCmd.Caption;
   SaveAsWinCmd.Caption := SaveFileAsCmd.Caption;
+  SaveLogItem.Caption := SaveFileAsCmd.Caption;
 
   for C := 0 to ComponentCount - 1 do
     if Components[C] is TTBXToolbar then
@@ -2963,6 +2977,35 @@ begin
         end;
 end;
 
+
+procedure TMainFrm.StopCompileCmdUpdate(Sender: TObject);
+begin
+  StopCompileCmd.Enabled := (CurEditFrm <> nil) and CurEditFrm.IsCompiling;
+end;
+
+procedure TMainFrm.StopCompileCmdExecute(Sender: TObject);
+begin
+  with CurEditFrm do
+  begin
+    PauseCompile;
+    if QuestionDlg(LangStr('StopCompilePrompt'), mbQuestionDefBtn2) = IDYES then
+      StopCompile;
+    ResumeCompile;
+  end;
+end;
+
+procedure TMainFrm.SaveLogItemClick(Sender: TObject);
+var
+  FileName: String;
+begin
+  FileName := CurEditFrm.FileName;
+  SaveDlg.FileName := ChangeFileExt(ExtractFileName(FileName), '') + '-log.txt';
+  SaveDlg.InitialDir := ExtractFileDir(FileName);
+  SaveDlg.DefaultExt := 'txt';
+  SaveDlg.Filter := GetLangFileFilter(['TextFileFilter']);
+  if SaveDlg.Execute then
+    CurEditFrm.LogBox.Lines.SaveToFile(SaveDlg.FileName);
+end;
 
 initialization
   SynHighlighterNSIS.TokensFileName := ExtractFilePath(ParamStr(0)) + 'Config\Syntax.ini';

@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 ukrainian messages.
+; $Id$
 
 ; Translator________: Yuri Holubow [ holubow@ua.fm ]
 ; Translator URL____: http://www.nash-soft.org.ua
@@ -92,6 +93,7 @@ ToolsEditCodeTemplate=&Редагувати шаблони
 ; NSIS menu
 NSISCompil=&Компілювати сценарій
 NSISCompilRun=Компілювати і запустити|Shift+F9|Компілювати і запустити активний скрипт
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Запустити установку
 NSISConfig=&Конфігурація
 
@@ -164,7 +166,7 @@ Down=&Вниз
 
 ; File filters
 AllFileFilter=Всі файли (*.*)|*.*
-NSISFileFilter=Файли NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Файли NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Виконувані файли (*.exe)|*.exe
 HTMLFileFilter=Файли HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Файл настройок установки (*.ini)|*.ini
@@ -376,10 +378,12 @@ FileModified=Файл "%s" був оновлений ззовні. Перезавантажити його?
 NoCompiler=Перед компіляцією сценарію виберіть компілятор NSIS
 NoDocs=Перед тим, як знайомитися з розширеною документацією на NSIS, прогляньте файл допомоги по NSIS
 OpenFileError=Неможливо відкрити файл %s
-NoCloseCompiling=У той час поки компілюється сценарій вихід неможливий
+NoCloseCompiling=У той час поки компілюється сценарій вихід неможливий$nlDo you want to stop the compiler?
 Untitled=Без_назви %.2d
 EditTextCaption=Редагувати текст
 EditListitemsCaption=Редагувати елементи списку
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

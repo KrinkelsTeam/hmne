@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Wizard edit file form
+
+  $Id$
 
 }
 unit UEditFile;
@@ -33,8 +35,8 @@ type
     { Public declarations }
   end;
 
-{var
-  EditFileFrm: TEditFileFrm;}
+var
+  LastDir: String;
 
 function EditArchivo(var Origen, Destino: String; var Overwrite: TOverwriteType;
   MultiSelect: Boolean = True): Boolean;
@@ -51,7 +53,7 @@ begin
   try
     OrigenEdt.Text := Origen;
     DestinoEdt.Text := Destino;
-    if DestinoEdt.Text = '' then DestinoEdt.Text := '$INSTDIR';
+    if DestinoEdt.Text = '' then DestinoEdt.Text := LastDir;
     OverwriteChk.ItemIndex := Ord(OverWrite)-1;
     if MultiSelect then
       AbrirDlg.Options := AbrirDlg.Options + [ofAllowMultiSelect]
@@ -62,6 +64,7 @@ begin
     begin
       Origen := OrigenEdt.Text;
       Destino := DestinoEdt.Text;
+      LastDir := Destino;
       Overwrite := TOverwriteType(OverwriteChk.ItemIndex+1);
     end;
   finally

@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 czech messages
+; $Id$
 
 ; Translator: Geralt <geralt@cestiny.cz>
 ; Translator URL: http://geralt.cestiny.cz
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=&Upravit šablony...
 ; NSIS menu
 NSISCompil=&Kompilovat skript|Ctrl+F9|Zkompiluje aktivní skript
 NSISCompilRun=K&ompilovat a spustit|Shift+F9|Zkompiluje a spustí aktivní skript
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Spustit instalátor|F9|Spustí aktivní skript
 NSISConfig=&Nastavení...|Ctrl+F11|Nastavení kompilátoru a cest k soubrùm kompilátoru
 
@@ -166,7 +168,7 @@ Down=&Dolù
 
 ; File filters
 AllFileFilter=Všechny soubory (*.*)|*.*
-NSISFileFilter=NSIS soubory (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=NSIS soubory (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Spustitelné soubory (*.exe)|*.exe
 HTMLFileFilter=HTML soubory (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Soubor nastavení instalace (*.ini)|*.ini
@@ -380,10 +382,12 @@ FileModified=Nìkterá z aplikací aktualizovala soubor "%s". Pøejete si jej znovu 
 NoCompiler=Pøed kompilováním skriptu musíte definovat a vybrat kompilátor NSIS souborù
 NoDocs=Pøed zobrazením dokumentace NSIS musíte definovat složku se soubory nápovìdy pro NSIS
 OpenFileError=Nemohu otevøít soubor %s
-NoCloseCompiling=Program pøi kompilaci skriptu nelze ukonèit
+NoCloseCompiling=Program pøi kompilaci skriptu nelze ukonèit$nlDo you want to stop the compiler?
 Untitled=Nepojmenovaný %.2d
 EditTextCaption=Upravit text
 EditListitemsCaption=Upravit seznam položek
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

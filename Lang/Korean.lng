@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 Korean(한글) messages.
+; $Id$
 
 ; Translator: Jeeni <hjhome2000@naver.com>
 ; Translator URL: http://hjhome2000.bcpark.net/ - not available
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=코드 템플릿 편집(&E)...
 ; NSIS menu
 NSISCompil=스크립트 컴파일(&C)|Ctrl+F9|작업 중인 스크립트를 컴파일합니다.
 NSISCompilRun=컴파일 및 실행(&O)|Shift+F9|작업 중인 스크립트를 컴파일한 뒤 실행합니다.
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=설치 실행(&E)|F9|작업 중인 스크립트를 실행합니다.
 NSISConfig=환경 설정(&N)...|Ctrl+F11|컴파일 경로, 부호 정의 및 컴파일러 설정 변경
 
@@ -167,7 +169,7 @@ Down=아래로(&D)
 
 ; File filters
 AllFileFilter=모든 파일 (*.*)|*.*
-NSISFileFilter=NSIS 파일 (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=NSIS 파일 (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=실행 파일 (*.exe)|*.exe
 HTMLFileFilter=HTML 파일 (*.htm, *.html)|*.htm;*.html
 INIFileFilter=인스톨-옵션 파일 (*.ini)|*.ini
@@ -388,10 +390,12 @@ FileModified=다른 프로그램이 "%s" 파일을 업데이트했습니다. 다시 불러오시겠습니까
 NoCompiler=스크립트를 컴파일하기 전에 NSIS 컴파일러를 선택해주세요.
 NoDocs=NSIS 문서를 보기전에 NSIS 도움말 파일을 설정해주세요.
 OpenFileError=%s 파일을 열 수 없습니다.
-NoCloseCompiling=스크립트를 컴파일하는 중에는 종료할 수 없습니다.
+NoCloseCompiling=스크립트를 컴파일하는 중에는 종료할 수 없습니다.$nlDo you want to stop the compiler?
 Untitled=제목 없음 %.2d
 EditTextCaption=텍스트 편집
 EditListitemsCaption=목록 아이템 편집
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

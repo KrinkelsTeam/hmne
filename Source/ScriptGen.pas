@@ -1,8 +1,11 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Script Generation code
+
+  $Id$
+  
 }
 unit ScriptGen;
 
@@ -60,9 +63,31 @@ const
           '$SYSDIR'#13#10 +
           '$EXEDIR'#13#10 +
           '$WINDIR'#13#10 +
-          '$STARTMENU'#13#10 +             
+          '$STARTMENU'#13#10 +
           '$SMPROGRAMS'#13#10 +
-          '$QUICKLAUNCH';
+          '$QUICKLAUNCH'#13#10 +
+          '$COMMONFILES'#13#10 +
+          '$DOCUMENTS'#13#10 +
+          '$SENDTO'#13#10 +
+          '$RECENT'#13#10 +
+          '$FAVORITES'#13#10 +
+          '$MUSIC'#13#10 +
+          '$PICTURES'#13#10 +
+          '$VIDEOS'#13#10 +
+          '$NETHOOD'#13#10 +
+          '$FONTS'#13#10 +
+          '$TEMPLATES'#13#10 +
+          '$APPDATA'#13#10 +
+          '$PRINTHOOD'#13#10 +
+          '$INTERNET_CACHE'#13#10 +
+          '$COOKIES'#13#10 +
+          '$HISTORY'#13#10 +
+          '$PROFILE'#13#10 +
+          '$ADMINTOOLS'#13#10 +
+          '$RESOURCES'#13#10 +
+          '$RESOURCES_LOCALIZED'#13#10 +
+          '$CDBURN_AREA';
+
 
   SShortCutDirs = '$ICONS_GROUP'#13#10 +
                   '$DESKTOP'#13#10 +
@@ -200,6 +225,9 @@ var
   var
     D: string;
   begin
+    if ((Dir <> '$INSTDIR') and (Dir <> '$ICONS_GROUP')) and
+      (Pos(Dir, SDirs + SShortCutDirs) > 0) then Exit;
+
     D := Format(SRMDir, [QuoteStr(Dir)]);
     if UninstDirs.IndexOf(D) < 0 then
       UnInstDirs.Append(D);

@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 Chinese (Traditional) messages.
+; $Id$
 
 ; Translator: Kii Ali <kiiali@cpatch.org>
 ; Translator URL: http://cpatch.org/kiiali/
@@ -99,6 +100,7 @@ ToolsEditCodeTemplate=編輯代碼模板(&E)||編輯代碼模板
 ; NSIS 選單
 NSISCompil=編譯腳本(&C)|Ctrl+F9|編譯作用中腳本
 NSISCompilRun=編譯並執行(&R)|Shift+F9|編譯並執行作用中腳本
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=執行安裝程式(&E)|F9|執行作用中腳本
 NSISConfig=組態(&O)...|Ctrl+F11|變更編譯、定義符號、與設定編譯器選項
 
@@ -183,7 +185,7 @@ Down=下(&D)
 ; File filters
 ; 檔案過濾器
 AllFileFilter=所有檔案 (*.*)|*.*
-NSISFileFilter=NSIS 檔案 (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=NSIS 檔案 (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=X 可執行檔案 (*.exe)|*.exe
 HTMLFileFilter=HTML 檔案 (*.htm, *.html)|*.htm;*.html
 INIFileFilter=I Install Options 檔案 (*.ini)|*.ini
@@ -406,10 +408,12 @@ FileModified=其他的應用程式已更新檔案 "%s" 。要重新載入嗎？
 NoCompiler=在編譯腳本之前，請選擇 NSIS 編譯器。
 NoDocs=在顯示 NSIS 文件之前，請選擇 NSIS 幫助檔案。
 OpenFileError=無法開啟檔案 %s 。
-NoCloseCompiling=當編譯腳本時，無法離開應用程式。
+NoCloseCompiling=當編譯腳本時，無法離開應用程式。$nlDo you want to stop the compiler?
 Untitled=Untitled%.2d
 EditTextCaption=編輯文字
 EditListitemsCaption=編輯清單項目
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- 精靈 -----------

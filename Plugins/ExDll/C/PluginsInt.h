@@ -1,3 +1,11 @@
+/*
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura
+  <ranametal@users.sourceforge.net>
+
+  $Id$
+
+*/
+
 #ifndef _HMNE_PLUGINS_H_
 #define _HMNE_PLUGINS_H_
 
@@ -279,6 +287,14 @@ typedef enum
     // Return 1 if the specified plugin is loaded. Param1 must point to a null-terminated
     // string that is the description of the plugin.
 
+
+    // ***** New file commands *****
+
+    // Get the file name of the current active editor.
+    // Param1 must point to a buffer with a least MAX_PATH bytes allocated.
+    // If succes returns the number of bytes copied to the buffer.
+    EC_FILE_GET_CURRENT_FILENAME,
+
     __EC_LAST
 } EditorCommand;
 
@@ -291,6 +307,7 @@ typedef enum
   E_BEFORECOMPILE,
   E_COMPILEFAIL,
   E_COMPILESUCCES,
+  E_COMPILECANCELED,  
   E_RUNEXECUTABLE,
   E_LANGCHANGED,
   E_TBTHEMECHANGED,

@@ -169,7 +169,7 @@ object WizardFrm: TWizardFrm
     Width = 499
     Height = 256
     Align = alClient
-    PageIndex = 4
+    PageIndex = 7
     TabOrder = 2
     object TPage
       Left = 0
@@ -1628,7 +1628,7 @@ object WizardFrm: TWizardFrm
           TabOrder = 7
         end
         object UseUninstChk: TCheckBox
-          Left = 16
+          Left = 8
           Top = 0
           Width = 97
           Height = 17

@@ -1,8 +1,8 @@
 ; HM NIS EDIT 2.0b4 french messages.
+; $Id$
 
 ; Translator: Julien (Vk) <veekee@winampfr.com>
 ; Translator URL: http://www.winampfr.com/nsis (home for french nsis users)
-
 
 [Strings]
 ; Settings
@@ -86,6 +86,7 @@ ToolsEditCodeTemplate=&Modifier les modèles de code
 ; NSIS menu
 NSISCompil=&Compiler le script|Ctrl+F9|Compile le script courant
 NSISCompilRun=C&ompiler et Exécuter|Shift+F9|Compile et exécute le script actif
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Exécuter l'installation|F9|Exécute le script courant
 NSISConfig=&Configuration|Ctrl+F11|Modifie le chemin de compilation, les symboles définis et définis les options de compilation
 
@@ -160,7 +161,7 @@ Down=Vers le &bas
 
 ; File filters
 AllFileFilter=Tous les fichiers (*.*)|*.*
-NSISFileFilter=Fichiers NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Fichiers NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh*.ini
 ExeFileFilter=Fichiers exécutables (*.exe)|*.exe
 HTMLFileFilter=Fichiers HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Fichier InstallOptions (*.ini)|*.ini
@@ -373,10 +374,12 @@ FileModified=Une autre application a mis à jour "%s". Voulez-vous le recharger ?
 NoCompiler=Avant decompiler le script, veuillez sélectionner le compilateur NSIS
 NoDocs=Avant d'ouvrir la documentation NSIS, veuillez sélectionner le fichier d'aide NSIS
 OpenFileError=Impossible d'ouvrir le fichier %s
-NoCloseCompiling=Impossible de quitter pendant la compilation du script
+NoCloseCompiling=Impossible de quitter pendant la compilation du script$nlDo you want to stop the compiler?
 Untitled=Sans-titre %.2d
 EditTextCaption=Modifier le texte
 EditListitemsCaption=Modifier la liste des élements
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

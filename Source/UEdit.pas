@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Editor frame
+
+  $Id$
 
 }
 unit UEdit;
@@ -15,6 +17,22 @@ uses
   SynEditKeyCmds, SynMemo;
 
 type
+  TEditFrm = class;
+
+  TCompilerThread = class(TThread)
+  private
+    FLogBoxHandle: THandle;
+    FEditor: TEditFrm;
+    FRun: Boolean;
+    procedure ThreadTerminate(Sender: TObject);
+  protected
+    procedure Execute; override;
+  public
+    ProcessHandle, ReadHandle: THandle;
+    constructor Create(Editor: TEditFrm; Run: Boolean);
+    destructor Destroy; override;
+  end;
+
   TEditFrm = class(TCustomMDIChild)
     Edit: TSynMemo;
     Splitter1: TSplitter;
@@ -49,6 +67,7 @@ type
     SaveLogBoxHeight: Integer;
     FIsCompiling: Boolean;
     SaveReadOnly: Boolean;
+    CompThread: TCompilerThread;
     procedure SetIsCompiling(Value: Boolean);
     procedure SetErrorLine(ALine: Integer);
     procedure SetLogBoxVisible(const Value: Boolean);
@@ -56,7 +75,7 @@ type
     procedure LogBoxDblClick(Sender: TObject);
     procedure WMMouseLeave(var Msg: TMessage); message CM_MOUSELEAVE;
     procedure WMCopyData(var Msg: TWMCopyData); message WM_COPYDATA;
-    procedure WMTimer(var Msg: TMessage); message WM_TIMER; 
+    procedure WMTimer(var Msg: TMessage); message WM_TIMER;
     procedure ShowScriptErrorLine(const ErrorFileName: String;
       ErrorLineNumber: Integer);
     function HintWindowReleaseHandle: Boolean;
@@ -77,6 +96,10 @@ type
     procedure RunSetup;
     function AllowCompile: Boolean;
 
+    procedure PauseCompile;
+    procedure ResumeCompile;
+    procedure StopCompile;
+
     procedure SaveFile(AFileName: String); override;
     procedure LoadFile(AFileName: String); override;
 
@@ -93,14 +116,6 @@ var
 const
   StrDelim = [#39, '"', '`'];
   ComentChars = [';', '#'];
-
-  {NSIEditOptions = [eoAutoIndent,eoDragDropEditing,eoGroupUndo,
-    eoKeepCaretX, eoScrollPastEol,eoShowScrollHint,eoSmartTabDelete,
-      eoTabsToSpaces,eoTrimTrailingSpaces];
-  INIEditOptions = [eoAutoIndent,eoDragDropEditing,eoGroupUndo,eoKeepCaretX,
-    eoShowScrollHint,eoSmartTabDelete, eoTabsToSpaces];
-
-  EditOptions: array[Boolean] of TSynEditorOptions = (NSIEditOptions,INIEditOptions);}
 
 implementation
 
@@ -185,22 +200,6 @@ end;
 
 { TCompilerThread }
 
-type
-  TCompilerThread = class(TThread)
-  private
-    FLogBoxHandle: THandle;
-    FEditor: TEditFrm;
-    FRun: Boolean;
-    procedure ThreadTerminate(Sender: TObject);
-  protected
-    procedure Execute; override;
-  public
-    ProcessHandle, ReadHandle: THandle;
-    constructor Create(Editor: TEditFrm; Run: Boolean);
-    destructor Destroy; override;
-  end;
-
-
 constructor TCompilerThread.Create(Editor: TEditFrm; Run: Boolean);
 begin
   Inc(CompilingCount);
@@ -227,6 +226,7 @@ destructor TCompilerThread.Destroy;
 begin
   Dec(CompilingCount);
   inherited Destroy;
+  FEditor.CompThread := nil;
   FEditor.IsCompiling := False;
 end;
 
@@ -238,7 +238,7 @@ var
 begin
   try
     LogLen := 0;
-    while ReadFile(ReadHandle, Buf, SizeOf(Buf) - 1, NumRead, nil) do
+    while (not Terminated) and ReadFile(ReadHandle, Buf, SizeOf(Buf) - 1, NumRead, nil) do
     begin
       Buf[NumRead] := #0;
       SendMessage(FLogBoxHandle, EM_SETSEL, LogLen, LogLen);
@@ -246,6 +246,9 @@ begin
       SendMessage(FLogBoxHandle, EM_REPLACESEL, 0, wParam(@Buf[0]));
       SendMessage(FLogBoxHandle, EM_SCROLLCARET, 0, 0);
     end;
+    if Terminated then
+      TerminateProcess(ProcessHandle, 0);
+    Sleep(1);
   except
     { NADA }
   end;
@@ -261,6 +264,14 @@ begin
 
     CloseHandle(ProcessHandle);
     CloseHandle(ReadHandle);
+
+    if Terminated then
+    begin
+      FEditor.LogBox.Lines.Append(#13#10 + LangStr('CompileCanceled') + #13#10);
+      SendMessage(FLogBoxHandle, EM_SCROLLCARET, 0, 0);
+      Plugins.Notify(E_COMPILECANCELED, Integer(PChar(FEditor.FileName)));
+      Exit;
+    end;
 
     FEditor.SuccessCompile := AExitCode = 0;
 
@@ -314,7 +325,7 @@ begin
   LogBox.PopupMenu := MainFrm.LogBoxPopup;
   SetLogBoxVisible(False);
   TRichEditAccess(LogBox).OnDblClick := LogBoxDblClick;
-  FDefExt := '.nsi';  
+  FDefExt := '.nsi';
 end;
 
 procedure TEditFrm.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -327,8 +338,10 @@ begin
   CanClose := not IsCompiling;
   if not CanClose then
   begin
-     WarningDlg(LangStr('NoCloseCompiling'));
-     Exit;
+    PauseCompile;
+    if QuestionDlg(LangStr('NoCloseCompiling'), mbQuestionDefBtn2) = IDYES then
+      StopCompile;
+    ResumeCompile;
   end;
 end;
 
@@ -472,8 +485,6 @@ procedure TEditFrm.Compilar(Run: Boolean = False);
       SysErrorMessage(GetLastError));
   end;
 
-var
-  CompThread: TCompilerThread;
 begin
   CompThread := TCompilerThread.Create(Self, Run);
   try
@@ -481,7 +492,7 @@ begin
       CompThread.ProcessHandle, CompThread.ReadHandle) then RaiseLastError;
     CompThread.Resume;
   except
-    CompThread.Free;
+    FreeAndNil(CompThread);
     raise;
   end;
 end;
@@ -737,6 +748,25 @@ begin
   { This should fix bug #858757}
   if WindowFromPoint(Mouse.CursorPos) <> Edit.Handle then
     HintWindowReleaseHandle;
+end;
+
+
+procedure TEditFrm.PauseCompile;
+begin
+  if CompThread <> nil then
+    CompThread.Suspend;
+end;
+
+procedure TEditFrm.ResumeCompile;
+begin
+  if CompThread <> nil then
+    CompThread.Resume;
+end;
+
+procedure TEditFrm.StopCompile;
+begin
+  if CompThread <> nil then
+    CompThread.Terminate;
 end;
 
 initialization

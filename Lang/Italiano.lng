@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b4 italian messages.
+; $Id$
 
 ; Translator: Alessandro Carrera
 ; Translator URL: http://alexcar.virtualave.net
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=Modifica mo&dello
 ; NSIS menu
 NSISCompil=&Compila script
 NSISCompilRun=C&ompila ed Esegui|Shift+F9|Compila ed Esegue lo script attivo
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Esegui setup
 NSISConfig=Confi&gurazione
 
@@ -165,7 +167,7 @@ Down=&Giù
 
 ; File filters
 AllFileFilter=Tutti i files (*.*)|*.*
-NSISFileFilter=Files NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Files NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Files eseguibili (*.exe)|*.exe
 HTMLFileFilter=Files HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Files InstallOptions (*.ini)|*.ini
@@ -377,10 +379,12 @@ FileModified=Un'altra applicazione ha modificato il file "%s". Aggiornarlo?
 NoCompiler=Prego selezionare il compilatore NSIS prima di compilare lo script
 NoDocs=Prego selezonare il file di aiuto NSIS prima di mostrare la documentazione NSIS
 OpenFileError=impossibile aprire il file %s
-NoCloseCompiling=Non è possibile uscire durante la compilazione degli scripts
+NoCloseCompiling=Non è possibile uscire durante la compilazione degli scripts$nlDo you want to stop the compiler?
 Untitled=Senza nome %.2d
 EditTextCaption=Modifica testo
 EditListitemsCaption=Modifica lista
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

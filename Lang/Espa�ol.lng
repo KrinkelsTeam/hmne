@@ -1,5 +1,6 @@
 ; Mensajes en epañol de HM NIS EDIT 2.0b4
 ; http://espanol.geocities.com/ranametalcr
+; $Id$
 
 [Fonts]
 DialogFontName=MS Shell Dlg
@@ -90,6 +91,7 @@ ToolsEditCodeTemplate=&Editar plantillas de código...
 ; NSIS menu
 NSISCompil=&Compilar|Ctrl+F9|Compila el script
 NSISCompilRun=C&ompilar y ejecutar|Shift+F9|Compila el script y ejecuta el instalador producido
+NSISStopCompile=Detener compilación|Esc|Detiene el proceso de compilación
 NSISExec=&Ejecutar instalador|F9|Ejecuta el programa instalador
 NSISConfig=Co&nfigurar...|Ctrl+F11|Cambia la ruta del compilador, define símbolos y establece opciones del compilador
 
@@ -165,7 +167,7 @@ Down=&Bajar
 
 ; File filters
 AllFileFilter=Todos los archivos (*.*)|*.*
-NSISFileFilter=Archivos NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Archivos NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Archivos ejecutables (*.exe)|*.exe
 HTMLFileFilter=Archivos HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Archivo de Install options (*.ini)|*.ini
@@ -378,11 +380,12 @@ FileModified=El archivo "%s" a sido modificado por otra aplicación. ¿Desea recar
 NoCompiler=Antes de compilar el script por favor seleccione el compilador NSIS
 NoDocs=Antes de mostrar la documentación del NSIS por favor seleccione el archivo de ayuda del NSIS
 OpenFileError=No se puede abrir el archivo %s
-NoCloseCompiling=No se puede salir mientras se compilan scripts.
+NoCloseCompiling=No se puede salir mientras se compilan scripts.$nl¿Desea detener el compilador?
 Untitled=Sin título %.2d
 EditTextCaption=Editar texto
 EditListitemsCaption=Editar ítem de la lista
-
+StopCompilePrompt=¿Está seguro que desea detener el compilador?
+CompileCanceled=Compilación cancelada por el usuario.
 
 
 ; -------- WIZARD -----------

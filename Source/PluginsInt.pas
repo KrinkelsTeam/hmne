@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Plugins interface
+
+  $Id$
 
 }
 unit PluginsInt;
@@ -286,7 +288,15 @@ type
 
     EC_ISPLUGINLOADED,
     // Return 1 if the specified plugin is loaded. Param1 must point to a null-terminated
-    // string that is the description of the plugin. 
+    // string that is the description of the plugin.
+
+
+    // ***** New file commands *****
+
+    // Get the file name of the current active editor.
+    // Param1 must point to a buffer with a least MAX_PATH bytes allocated.
+    // If succes returns the number of bytes copied to the buffer.
+    EC_FILE_GET_CURRENT_FILENAME,
 
     __EC_LAST);
 
@@ -299,6 +309,7 @@ type
   E_BEFORECOMPILE,
   E_COMPILEFAIL,
   E_COMPILESUCCES,
+  E_COMPILECANCELED,
   E_RUNEXECUTABLE,
   E_LANGCHANGED,
   E_TBTHEMECHANGED,
@@ -507,8 +518,10 @@ type
         |                |  NSISMenu                         |
         |                |    nmCompItem                     |
         |                |    nmCompRunItem                  |
-        |                |    nmRunItem                      |
+        |                |    nmStopCompItem                 |
         |                |    nmSeparator1                   |
+        |                |    nmRunItem                      |
+        |                |    nmSeparator2                   |
         |                |    nmConfigItem                   |
         |                |  WindowMenu                       |
         |                |    wmCacadeItem                   |
@@ -526,10 +539,7 @@ type
         |                |  HelpMenu                         |
         |                |    hmNSISHelp                     |
         |                |    hmSeparator1                   |
-        |                |    hmNIEditWebPageItem            |
-        |                |    hmNSISWebPageItem              |
-        |                |    hmNSISDevWebPageItem           |
-        |                |    hmNSISForumItem                |
+        |                |    hmURLGroupItem                 |
         |                |    hmSeparator2                   |
         |                |    hmAboutItem                    |
         |-----------------------------------------------------
@@ -574,6 +584,8 @@ type
         | tbNSIS         |                                   |
         |                |    ntbCompItem                    |
         |                |    ntbCompRunItem                 |
+        |                |    ntbStopCompItem                |
+        |                |    ntbSeparator1                  |
         |                |    ntbRunItem                     |
         |-----------------------------------------------------
         | tbWindow       |                                   |

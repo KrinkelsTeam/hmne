@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b4 polish messages.
+; $Id$
 ; Polskie tlumaczenie: Mariusz Jakubowski <mjakubowski@go2.pl>
 
 
@@ -93,6 +94,7 @@ ToolsEditCodeTemplate=&Edytuj szblon
 ; NSIS menu
 NSISCompil=&Kompiluj skrypt
 NSISCompilRun=Sko&mpiluj i uruchom|Shift+F9|Kompiluje i uruchamia aktywny skrypt
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Uruchom instalatora
 NSISConfig=&Konfiguracja
 
@@ -168,7 +170,7 @@ n_Down=&Down
 
 ; File filters
 AllFileFilter=Wszystkie pliki (*.*)|*.*
-NSISFileFilter=Pliki NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=Pliki NSIS (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Pliki wykonywalne (*.exe)|*.exe
 HTMLFileFilter=Pliki HTML (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Pliki wtyczki InstallOptions (*.ini)|*.ini
@@ -381,10 +383,12 @@ FileModified=Inna aplikacja zmieni³a zawartoœc pliku "%s" Czy chcesz go za³adowa
 NoCompiler=Przed kompilacj¹ skryptu proszê wska¿ kompilator NSIS
 NoDocs=Przed pokazaniem dokumentacji NSIS proszê wska¿ plik pomocy NSIS
 OpenFileError=Nie mogê otworzyæ pliku %s
-NoCloseCompiling=Nie mo¿na zamkn¹æ programu podczas kompilacji skryptu
+NoCloseCompiling=Nie mo¿na zamkn¹æ programu podczas kompilacji skryptu$nlDo you want to stop the compiler?
 Untitled=Bez nazwy %.2d
 EditTextCaption=Edytuj tekst
 EditListitemsCaption=Edytuj elementy listy
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

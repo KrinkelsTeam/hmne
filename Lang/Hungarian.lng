@@ -1,4 +1,5 @@
 ; HM NIS EDIT 2.0b5 hungarian messages.
+; $Id$
 
 ; Translator: gLes <gLes@hab.hu>
 ; Translator URL: http://web.axelero.hu/gles6
@@ -91,6 +92,7 @@ ToolsEditCodeTemplate=&Kód sablonok szerkesztése...
 ; NSIS menu
 NSISCompil=Szkript &lefordítása|Ctrl+F9|Az aktív szkript lefordítása
 NSISCompilRun=Lefordítás, majd &futattás|Shift+F9|Az aktív szkript lefordítása, majd futtatása
+n_NSISStopCompile=Stop compile|Esc|Stop the compiler process
 NSISExec=&Telepítõ futtatása|F9|Az aktív szkript futtatása
 NSISConfig=&Konfiguráció...|Ctrl+F11|Lefordítási útvonal megváltoztatása, szimbólumok definiálása és a fordító beállítása
 
@@ -167,7 +169,7 @@ Down=&Le
 
 ; File filters
 AllFileFilter=Minden fájl (*.*)|*.*
-NSISFileFilter=NSIS fájlok (*.nsi, *.nsh)|*.nsi;*.nsh
+NSISFileFilter=NSIS fájlok (*.nsi, *.nsh, *.ini)|*.nsi;*.nsh;*.ini
 ExeFileFilter=Futtatható fájlok (*.exe)|*.exe
 HTMLFileFilter=HTML fájlok (*.htm, *.html)|*.htm;*.html
 INIFileFilter=Telepítési beállítás fájlok (*.ini)|*.ini
@@ -375,10 +377,12 @@ FileModified=Egy másik alkalmazás frissítette a(z) "%s" fájlt. Újratölti?
 NoCompiler=Mielõtt lefordíthatná a szkriptet, be kell állítania az NSIS fordítót
 NoDocs=Mielõtt megtekinthetné az NSIS dokumentációt be kell állítania az NSIS súgófájlját
 OpenFileError=Nem lehet megnyitni a fájlt: %s
-NoCloseCompiling=Nem lehet kilépni szkriptek fordítása közben
+NoCloseCompiling=Nem lehet kilépni szkriptek fordítása közben$nlDo you want to stop the compiler?
 Untitled=Névtelen %.2d
 EditTextCaption=Szöveg szerkesztése
 EditListitemsCaption=Lista elem szerkesztése
+n_StopCompilePrompt=Are you sure you want to stop the compiler?
+n_CompileCanceled=Compilation canceled by user.
 
 
 ; -------- WIZARD -----------

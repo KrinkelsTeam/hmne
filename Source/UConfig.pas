@@ -1,8 +1,10 @@
 {
-  HM NIS Edit (c) 2003 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  HM NIS Edit (c) 2003-2004 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   For conditions of distribution and use, see license.txt
 
   Configuration window
+
+  $Id$
 
 }
 unit UConfig;
@@ -186,6 +188,8 @@ type
     procedure ApplyBtnClick(Sender: TObject);
     procedure BrowserHomeEdtChange(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure SynEditMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
     Liter: TSynNSISSyn;
     FAvailableTBXThemes: TStringList;
@@ -909,6 +913,23 @@ end;
 procedure TConfigFrm.FormDestroy(Sender: TObject);
 begin
   FAvailableTBXThemes.Free;
+end;
+
+procedure TConfigFrm.SynEditMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+var
+  Attri: TSynHighlighterAttributes;
+  Pt: TPoint;
+  I: Integer;
+  S: String;
+begin
+  Pt := SynEdit.PixelsToRowColumn(Point(X, Y));
+  SynEdit.GetHighlighterAttriAtRowCol(Pt, S, Attri);
+  if Attri = nil then Exit;
+  I := ListBox.Items.IndexOf(Attri.Name);
+  if I < 0 then Exit;
+  ListBox.ItemIndex := I;
+  ListBoxClick(ListBox);
 end;
 
 end.
