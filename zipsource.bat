@@ -1,0 +1,2 @@
+REM This need 7-zip http://www.7-zip.org/ be in the search path
+@7za a -tzip -mx -x!IniValCount.dof -x!.#* -x!nisedit.ini -x!LangFileConverter.dof -x!*.dcu -x!*.exe -x!*.e32 -x!*.bak -x!*.a -x!*.o -x!*.obj -x!*.tds -x!*.zip -x!*.pif -x!*.dll -x!*.cfg -x!*.hlp -x!*.gid -x!.cvsignore -x!Makefile.win -x!libhmne_sample.def -x!*.layout ..\nisedit20b5-src.zip -r *.*

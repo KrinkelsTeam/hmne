@@ -1,0 +1,56 @@
+pa' probar otra vez y otra ve
+Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
+  * Main programing.
+  
+Mariusz Jakubowski <mjakubowski@go2.pl>
+  * Original SynEdit highlighter for NSIS.
+  * Polish translation.
+  
+Julien (Vk) - http://www.winampfr.com/nsis
+  * French translation.
+  
+Geralt - http://geralt.cestiny.cz
+  * Czech translation. 
+
+Alessandro Carrera - http://alexcar.virtualave.net
+  * Italian translation.
+
+Timon - http://www.livejournal.com/users/timonster/
+  * Russian translation.
+  
+Makidis N. Michael - http://dias.aueb.gr/~p3010094/
+  * Greek translation  
+
+Kii Ali - http://cpatch.org/kiiali/
+  * Traditional & Simplified Chinese translation
+
+Yuri Holubow - http://www.nash-soft.com/holubow
+  * Splash screen, icons & other graphics
+  * Ukrainian translation
+
+Diego Marcos <deguix@hotmail.com>
+  * Brazilian portuguese translation
+
+Jeeni <hjhome2000@naver.com>
+  * Korean translation
+
+Brummelchen and Robert Kehl, http://roknet.de/
+  * German translation
+  
+Many developers
+  * SynEdit components http://synedit.sourceforge.net/
+  
+Jordan Russell
+  * ToolBar2000 components - http://www.jrsoftware.org/
+
+Alex A. Denisov
+  * ToolBarX components - http://www.g32.org/
+  
+Karl-Otto Rosenqvist
+  * RTDesigner component - http://welcome.to/towebo
+
+Gennadie Zuev
+  * ZPropList component - http://unicorn.micex.ru/users/gena
+
+Raoul Snyman
+  * ScrollingCredits component - http://web.eject.co.za/raoulsnyman/zips/credits.zip
