@@ -37,7 +37,7 @@ const
    AppName = 'HM NIS Edit';
    AppVersion = '2.0b6';
    AppVersionText = 'Version ' + AppVersion;
-   AppCopyrigh = '(c) 2003 Hector Mauricio Rodriguez Segura';
+   AppCopyrigh = '(c) 2003-2004 Hector Mauricio Rodriguez Segura';
 
    HMWebSite = 'http://hmne.sourceforge.net/';
    NSISWebSite = 'http://nsis.sourceforge.net/';
