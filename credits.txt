@@ -35,6 +35,9 @@ Jeeni <hjhome2000@naver.com>
 
 Brummelchen and Robert Kehl, http://roknet.de/
   * German translation
+
+gLes - http://web.axelero.hu/gles6
+  * Hungarian translation
   
 Many developers
   * SynEdit components http://synedit.sourceforge.net/

@@ -41,6 +41,7 @@ object AboutFrm: TAboutFrm
       'Makidis N. Michael - Greek'
       'Yuri Holubow - Ukrainian'
       'Julien (Vk)  - French'
+      'gLes - Hungarian'
       'Timon - Russian'
       'Jeeni - Korean'
       'Geralt - Czech'
