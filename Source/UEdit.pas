@@ -12,11 +12,11 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, StdCtrls, SynEditExport, SynEdit, ComCtrls, Menus, UCustomMDIChild,
-  SynEditKeyCmds;
+  SynEditKeyCmds, SynMemo;
 
 type
   TEditFrm = class(TCustomMDIChild)
-    Edit: TSynEdit;
+    Edit: TSynMemo;
     Splitter1: TSplitter;
     LogBox: TRichEdit;
     procedure EditChange(Sender: TObject);

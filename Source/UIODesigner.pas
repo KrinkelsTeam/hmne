@@ -11,7 +11,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   RTDesign, ExtCtrls, UCustomMDIChild, Menus, TB2Item, TBX, TB2Dock,
-  TB2Toolbar, SynEdit, ActnList, StdActns;
+  TB2Toolbar, SynEdit, ActnList, StdActns, SynMemo;
 
 type
   TBooleanValue = (Default, No, Yes);
@@ -67,7 +67,7 @@ type
   TIODesignerFrm = class(TCustomMDIChild)
     RTDesigner: TRTDesigner;
     Notebook: TNotebook;
-    CodeEditor: TSynEdit;
+    CodeEditor: TSynMemo;
     ParentDesignPanel: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
