@@ -466,13 +466,13 @@ begin
   begin
     if DlgBottom < 0 then
       Result := PixelsToDialogUnitsY((Height + Top) - (Parent.ClientRect.Bottom - Parent.ClientRect.Top),
-        TDesignPanel(Parent).AvCharSize.Y) div 2
+        TDesignPanel(Parent).AvCharSize.Y)
     else
       Result := PixelsToDialogUnitsY(Height + Top, TDesignPanel(Parent).AvCharSize.Y);
   end else
     if DlgBottom < 0 then
       Result := PixelsToDialogUnitsY((Top + Height) - (Parent.ClientRect.Bottom - Parent.ClientRect.Top),
-        TDesignPanel(Parent).AvCharSize.Y) div 2
+        TDesignPanel(Parent).AvCharSize.Y)
     else
       Result := PixelsToDialogUnitsY(Top + Height, TDesignPanel(Parent).AvCharSize.Y);
 end;
@@ -499,7 +499,7 @@ function TIOControl.GetLeft: Integer;
 begin
   if DlgLeft < 0 then
     Result := PixelsToDialogUnitsX(Left - (Parent.ClientRect.Right - Parent.ClientRect.Left),
-      TDesignPanel(Parent).AvCharSize.X) div 2
+      TDesignPanel(Parent).AvCharSize.X)
   else
     Result := PixelsToDialogUnitsX(Left, TDesignPanel(Parent).AvCharSize.X);
 end;
@@ -508,7 +508,7 @@ function TIOControl.GetRight: Integer;
 begin
   if DlgRight < 0 then
     Result := PixelsToDialogUnitsX((Left + Width) - (Parent.ClientRect.Right - Parent.ClientRect.Left),
-      TDesignPanel(Parent).AvCharSize.X) div 2
+      TDesignPanel(Parent).AvCharSize.X)
   else
     Result := PixelsToDialogUnitsX(Left + Width, TDesignPanel(Parent).AvCharSize.X);
 end;
@@ -517,7 +517,7 @@ function TIOControl.GetTop: Integer;
 begin
   if DlgTop < 0 then
     Result := PixelsToDialogUnitsY(Top - (Parent.ClientRect.Bottom - Parent.ClientRect.Top),
-      TDesignPanel(Parent).AvCharSize.Y) div 2
+      TDesignPanel(Parent).AvCharSize.Y)
   else
     Result := PixelsToDialogUnitsY(Top, TDesignPanel(Parent).AvCharSize.Y);
 end;
@@ -619,12 +619,12 @@ begin
   if FUseSpecialBottom then
   begin
     if Value < 0 then
-      Height :=  (((2*DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y)) - Top) + Parent.ClientRect.Bottom - Parent.ClientRect.Top)// - FControl.Tag
+      Height :=  (((DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y)) - Top) + Parent.ClientRect.Bottom - Parent.ClientRect.Top)// - FControl.Tag
     else
       Height := DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) - Top;
   end else
     if Value < 0 then
-      Height := (2*DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) + Parent.ClientRect.Bottom - Parent.ClientRect.Top) - Top
+      Height := (DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) + Parent.ClientRect.Bottom - Parent.ClientRect.Top) - Top
     else
       Height := DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) - Top;
 end;
@@ -651,7 +651,7 @@ procedure TIOControl.SetLeft(const Value: Integer);
 begin
   DlgLeft := Value;
   if Value < 0 then
-    Left := (2 * DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X) + Parent.ClientRect.Right - Parent.ClientRect.Left)
+    Left := (DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X) + Parent.ClientRect.Right - Parent.ClientRect.Left)
   else
     Left := DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X);
 end;
@@ -665,7 +665,7 @@ procedure TIOControl.SetRight(const Value: Integer);
 begin
   DlgRight := Value;
   if Value < 0 then
-    Width := (2 * DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X) + Parent.ClientRect.Right - Parent.ClientRect.Left) - Left
+    Width := (DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X) + Parent.ClientRect.Right - Parent.ClientRect.Left) - Left
   else
     Width := DialogUnitsToPixelsX(Value, TDesignPanel(Parent).AvCharSize.X) - Left
 end;
@@ -674,7 +674,7 @@ procedure TIOControl.SetTop(const Value: Integer);
 begin
   DlgTop := Value;
   if Value < 0 then
-    Top := (2 * DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) + Parent.ClientRect.Bottom - Parent.ClientRect.Top)
+    Top := (DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y) + Parent.ClientRect.Bottom - Parent.ClientRect.Top)
   else
     Top := DialogUnitsToPixelsY(Value, TDesignPanel(Parent).AvCharSize.Y)
 end;
