@@ -1,4 +1,3 @@
-pa' probar otra vez y otra ve
 Héctor Mauricio Rodríguez Segura <ranametal@users.sourceforge.net>
   * Main programing.
   

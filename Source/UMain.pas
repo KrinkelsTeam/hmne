@@ -565,6 +565,8 @@ uses TypInfo, ShellAPI, CommDlg, Clipbrd, SynEditKeyCmds, SynEditTypes, Utils,
 
 { TMainFrm }
 
+{$DEFINE DEV_COMPILE}
+
 const
   DefaultHelpFile = 'NSIS.chm';
 
@@ -1137,6 +1139,10 @@ var
   C: Integer;
 begin
   Caption := LangStr('MainCaption');
+
+{$IFDEF DEV_COMPILE}
+  Caption := Caption  + ' CVS ' + DateTimeToStr(FileDateToDateTime(FileAge(ParamStr(0))));
+{$ENDIF}
 
   FileMenu.Caption := LangStr('FileMenu');
   EditMenu.Caption := LangStr('EditMenu');

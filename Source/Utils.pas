@@ -35,7 +35,7 @@ type
 
 const
    AppName = 'HM NIS Edit';
-   AppVersion = '2.0b5';
+   AppVersion = '2.0b6';
    AppVersionText = 'Version ' + AppVersion;
    AppCopyrigh = '(c) 2003 Hector Mauricio Rodriguez Segura';
 

@@ -66,7 +66,7 @@ AutoIncBuild=0
 MajorVer=2
 MinorVer=0
 Release=0
-Build=5
+Build=6
 Debug=0
 PreRelease=1
 Special=0
@@ -78,13 +78,13 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=HM Software
 FileDescription=NSIS Script Editor with wizard and InstallOptions designer
-FileVersion=2.0.0.5
+FileVersion=2.0.0.6
 InternalName=NISEdit
 LegalCopyright=(c) 2002-2003 Hector Mauricio Rodríguez Segura
 LegalTrademarks=
 OriginalFilename=NisEdit.exe
 ProductName=HM NIS Edit
-ProductVersion=2.0b5
+ProductVersion=2.0b6
 Comments=Website: http://hmne.sourceforge.net/
 
 [Excluded Packages]
