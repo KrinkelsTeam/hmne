@@ -1,0 +1,518 @@
+; HM NIS EDIT 2.0b4 polish messages.
+; Polskie tlumaczenie: Mariusz Jakubowski <mjakubowski@go2.pl>
+
+
+; ***** This language file need to be updated. *****
+; New entries are marked with a "n_" prefix, please translate these entries,
+; remove the "n_" prefix, remove this comment and send the updated file to
+; ranametal@users.sourceforge.net. 
+; if the the person who update the file isn't the orginal translator you can add
+; a comment that says: "Updated by YourName"
+; ***** end *****
+
+
+[Strings]
+; Settings
+LangID=1045
+
+; Main window strings
+MainCaption=HM NIS Edit
+
+; Menus
+FileMenu=&Plik
+EditMenu=&Edycja
+SearchMenu=&Szukaj
+ViewMenu=&Widok
+FormatMenu=F&ormat
+ToolsMenu=&Narzêdzia
+NSISMenu=&NSIS
+WindowMenu=&Okna
+HelpMenu=&?
+
+;------------------------------------------------------------------------
+; Now you can customize the shortcuts and usage hint of the 
+; menu & tool bar items. The entries need to be in this format:
+; ItemText|ShortCut|UsageHint
+
+; File menu
+BlankFile=Nowy &pusty plik
+TemplateFile=&Nowy z szablonu
+WizardFile=Nowy z Kreatora
+NewIOFile=Nowy plik wtyczki InstallOptions
+FileOpen=&Otwórz
+Reopen=&Otwórz ponownie
+FileSave=Zapi&sz
+FileSaveAs=Zapisz &jako...
+FilePrint=&Drukuj
+FileConfigPrint=Ustawienia wydruku
+FileExit=Za&koñcz
+
+; Edit menu
+EditUndo=&Cofnij
+EditRedo=&Ponów
+EditCut=&Wytnij
+EditCopy=&Kopiuj
+EditCopyAsHTML=Kopiuj jako HTML
+EditPaste=&Wklej
+EditSelectAll=Z&aznacz wszystko
+
+; Search menu
+EditFind=&ZnajdŸ
+EditFindNext=ZnajdŸ &nastêpny
+EditReplace=Za&mieñ
+SearchGotoLine=&IdŸ do linii|F2|Przenosi kursor do okreœlonej linii
+ToggleBookmark=Dod&aj zak³adkê
+GotoBookmark=&IdŸ do zak³adki
+Bookmark=Zak³adka
+
+; View menu
+ToolBarsMenu=Paski narzêdzi
+ViewBrowser=Przegl¹darka|F4|Poka¿/ukryj przegl¹darkê internetow¹
+ViewWindowList=Lista okien|F5|Poka¿/ukryj liste otwartych okien
+ViewIOPanel=&Kontrolki InstallOptions|F6|Poka¿/ukryj panel kontrolek InstallOptions
+ViewStatusBar=&Pasek statusu
+ViewLogBox=Okno logu
+ViewSpecialChars=Znaki specjalne|F10|Pokazuj znaki koñca linii, spacje i tabulatory u¿ywaj¹c znaków specjalnych
+IOToggleDesignMode=Prze³¹cz do trybu projektowania|F12|Prze³¹cza pomiêdzy edytorem graficznym i tekstowym dla stron InstallOptions
+ViewOptions=&Opcje|F11|Poka¿ okno zawieraj¹ce opcje programu
+
+; Format menu
+FormatIndent=&Zwiêksz wciêcie
+FormatUnIndent=&Zmniejsz wciêcie
+FormatUpperCase=&WIELKIE LITERY
+FormatLowerCase=&ma³e litery
+FormatToggleCase=&mA£E/wIELKIE
+FormatQuoteSelection=&Cytuj zaznacznie
+
+; Tools menu
+ToolsInsertColor=Wstaw &kolor
+ToolsInsertFile=Wstaw nazwê pliku
+CodeTemplates=Szablony kodów
+ToolsEditCodeTemplate=&Edytuj szblon
+
+; NSIS menu
+NSISCompil=&Kompiluj skrypt
+NSISCompilRun=Sko&mpiluj i uruchom|Shift+F9|Kompiluje i uruchamia aktywny skrypt
+NSISExec=&Uruchom instalatora
+NSISConfig=&Konfiguracja
+
+; Window menu
+WindowCascade=Kaskada
+WindowTileHorizontal=S¹siaduj¹co poziomo
+WindowTileVertical=S¹siaduj¹co pionowo
+WindowArrangle=Rozmieœæ
+WindowPrior=Poprzednie okno||
+WindowNext=Natêpne ono||
+WindowList=Lista okien
+WindowClose=Zamknij okno
+WindowShow=Poka¿ okno
+n_WindowSMU=S&witch most used|Shift+Ctrl+W|
+
+
+; Help menu
+HelpNSIS=Pomoc NSISa
+HelpAbout=O programie...
+
+; Help menu URL links
+; The entries must have this format: ItemText|ShortCut|URL|ImageIndex 
+; ImageIndex is the image to show in the item; use 41 for home pages, 43 for forums,
+; 45 for generic links and -1 for no image.
+; For add a separator use URLLinkX=-
+n_URLLink1=HM NIS Edit Home Page||http://hmne.sourceforge.net/|41
+n_URLLink2=NSIS Official website||http://www.nullsoft.com/free/nsis/|41
+n_URLLink3=NSIS Development page||http://nsis.sourceforge.net/|41
+n_URLLink4=NSIS Forum||http://forums.winamp.com/forumdisplay.php?s=&forumid=65|43
+;URLLink5=-
+;URLLink6=Custom link 1||http://pagetoshow1.com/|45
+;URLLink7=Custom link 2||http://pagetoshow2.com/|45
+
+;------------------------------------------------------------------------
+;------------------------------------------------------------------------
+
+; Tool Bars
+TBMenuCaption=Menu
+TBStandardCaption=Standardowy
+TBEditCaption=Edytuj
+TBViewCaption=Widok
+TBSearchCaption=Szukaj
+TBFormatCaption=Format
+TBNSISCaption=NSIS
+TBWindowCaption=Okna
+IOPanelCaption=Kontrolki InstallOptions
+Browser=Przegl¹darka
+MoreButtons=Wiêcej...
+
+; Status bar
+CaretPos=Kol: %d - Lin: %d
+Modified=Zmodyfikowany
+Insert=Wstaw
+Overwrite=Nadpisywanie
+n_ReadOnly=Read only
+
+; Open file captions
+OpenTemplateCaption=Otwórz szablon
+OpenScriptCaption=Otwórz skrypt
+
+; IO designer
+BringToFront=Przesuñ na &wierzch
+SendToBack=&Przesuñ na spód
+Delete=&Usuñ|Ctrl+Del|
+n_SetTabOrder=&Tab order...
+n_ResizeWinto=&Resize designer
+n_ResizeItems=Modern UI|320/140;Classic UI|266/130
+
+; TabOrder dialog
+n_TabOrderCaption=Tab order
+n_Up=&Up
+n_Down=&Down
+
+; File filters
+AllFileFilter=Wszystkie pliki (*.*)|*.*
+NSISFileFilter=Pliki NSIS (*.nsi, *.nsh)|*.nsi;*.nsh
+ExeFileFilter=Pliki wykonywalne (*.exe)|*.exe
+HTMLFileFilter=Pliki HTML (*.htm, *.html)|*.htm;*.html
+INIFileFilter=Pliki wtyczki InstallOptions (*.ini)|*.ini
+IconFileFilter=Ikony (*.ico)|*.ico
+LicFileFilter=Pliki licencji (*.rtf, *.txt)|*.rtf;*.txt
+NSHFileFilter=Nag³ówki plików NSIS (*.nsh)|*.nsh
+RTFFileFilter=Pliki Rich text (*.rtf)|*.rtf
+TextFileFilter=Pliki tekstowe (*.txt)|*.txt
+n_CHMFileFilter=CHM files (*.chm)|*.chm
+n_HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
+
+; Message boxes
+ErrorDlgCaption=B³¹d
+InformationDlgCaption=Informacje
+QuestionDlgCaption=Potwierdzenie
+WarningDlgCaption=Ostrze¿enie
+
+; Buttons
+OK=OK
+Cancel=Anuluj
+Next=Dalej >
+Back=< Wstecz
+Finish=Zakoñcz
+n_Apply=Apply
+
+; About box
+n_AboutBoxCaption=About
+
+; Find window
+FindTextCaption=Szukany tekst
+FindText=Tekst do znalezienia:
+SearchOptions=Opcje
+CaseSensitive=Uwzglêdnij wielkoœæ liter
+WholeWordOnly=Uwzglêdnij tylko ca³e wyrazy
+SearchFromCursor=Szukaj od kursora
+SearchSelectedOnly=Tylko zaznaczenie
+Forward=Do przodu
+Backward=Do ty³u
+
+; Replace window
+ReplaceTextCaption=Zamieñ tekst
+ReplaceText=Tekst do zamiany:
+ReplaceAll=Zamieñ wszystkie
+
+; Goto line window
+GotoLineCaption=IdŸ do lini
+GotoLinePrompt=Podaj numer linii:
+
+; Options window
+EnvironmentConfigPage=Otoczenie
+EditorConfigPage=Edytor
+CompilerConfigPage=Kompilator
+n_PluginsConfigPage=Plugins
+
+; Options window Environment Config Page
+GeneralOptions=Opcje ogólne
+n_ShowSplashScreen=Show splash screen
+ShowWelcomeDialog=Pokazuj okno powitalne
+MultipleInstances=Zezwalaj na wiele kopii
+OpenIniFilesIn=Otwieraj pliki .ini w trybie projektowania
+n_OpenFilesOnStartup=Open last used files on startup
+n_UseDefBrowser=Use default browser
+Lang=&Wybierz jêzyk
+BrowserHome=Strona startowa przegl¹darki:
+ToolBarOptions=Opcje pasków narzêdzi
+TBSmoothDrag=£agodne przeci¹ganie w paskach narzêdzi
+PanelSmoothDrag=£agodne przeci¹ganie w panelach narzêdzi
+TBTheme=Motyw pasków narzêdzi:
+n_Default=Default
+n_OfficeXP=OfficeXP
+n_Stripes=Stripes
+FileAssoc=Powi¹zania plików
+DefaultEditor=Za&rejestruj jako domyœlny edytor plików NSIS
+SuccessfullyRegister=HM NIS Edit zosta³ pomyœlnie zarejestrowany jako domyœlny edytor
+n_IOGridOptions=InstallOptions Designer
+n_DisplayGrid=Display grid
+n_SnapToGrid=Snap to grid
+n_GridX=Grid size X:
+n_GridY=Grid size Y:
+n_CtrlDims=Show controls size as:
+n_RightBottom=Right/Bottom
+n_WidthHeight=Width/Height
+n_Both=Both
+n_Other=Other
+n_SaveOptionsIn=Save options in:
+n_Registry=Registry
+
+; Options window Editor Config Page
+DisplayPage=Wyœwietlanie
+OptionsPage=Opcje
+HighlighterPage=Kolory
+
+; Options window Editor Display Page
+Gutter=Rynna
+GutterVisible=Widoczne
+GutterShowLineNumbers=Pokazuj numery linii
+GutterStartAtZero=Zaczynaj od zera
+GutterShowLeaderZeros=Pokazuj zera prowadz¹ce
+GutterFont=Czcionka rynny:
+GutterColor=Kolor rynny:
+Font=Czcionka
+RightEdge=Prawy brzeg
+EdgeColumn=Kolumny brzegu:
+EdgeColor=Kolor brzegu:
+LineTabSpacing=Rozmiar spacji / tabulatora
+ExtraLines=Dodatkow linie:
+TabWidth=Szerokoœæ tabulatora:
+Bookmarks=Zak³adki
+BookmarkKeys=Klawisze zak³adek
+BookmarksVisible=Zak³adki widoczne
+EditorFont=Czcionka edytora
+
+; Options window Editor Options Page
+AutoIndent=Automatyczne wciêcia|Robi automatyczne wciêcia o takiej wielkoœci, jak poprzedzaj¹ca linia
+DragAndDropEditing=Edycja "przeci¹gnij i upuœæ"|Pozwala zaznaczyæ fragent tekstu i przeci¹gaæ w obrêbie dokumentu w inne miejsce
+HalfPageScroll=Przewijaj pó³ strony|Kiedy u¿ywane s¹ klawisze page-up oraz page-down strony bêd¹ przewijane tylko o po³owe ekranu
+ScrollByOneLess=Przewijaj o jedn¹ mniej|Wymusza przewijanie o jedn¹ liniê mniej
+ScrollPastEOF=Przewijaj za koniec pliku|Pozwala umieszczaæ kursor za znakiem koñca pliku
+ScrollPastEOL=Przewijaj za koniec linii|Pozwala umieœciæ kursor za znakiem koñca linii
+ShowScrollHint=Pokazuj podpowiedŸ podczas przewijania|Shows a hint of the visible line numbers when scrolling vertically
+SmartTabs=Inteligentne tabulatory|When tabbing, the cursor will go to the next non-white space character of the previous line
+TabsToSpaces=Zamieniaj tabulatory na spacje|Zamienia tabulatory na spacje o szerkoœci tabulatorów
+TrimTrailingSpaces=Obcinaj koñcz¹ce spacje|Spacje na koñcu linii zostan¹ obciête i niezapisane
+AltSetsColumnMode=Alt w³¹cza tryb kolumn|Przytrzymywanie klawisza Alt w³¹czy tryb zaznaczania kolumnowego
+KeepCaretX=Utrzymuj kursor w kolumnie|Kiedy przewijasz w pinie kursor zostaje zawsze w tej samej linii
+ScrollHintFollows=Przesuwaj podpowiedzi podczas przewijania|PodpowiedŸ bêdzie pod¹¿a³a za kursorem podczas przewijania
+GroupUndo=Grupuj historie|Gdy cofasz/ponawiasz akcje, ³¹czy wszystkie zmiany tego samego typu w jedn¹
+SmartTabDelete=Inteligentne usuwanie tabulatorów|Podobnie jak Inteligentne tabulatory, ale gdy usuwasz
+RightMouseMoves=Prawy klik przesuwa kursor|Kiedy klikasz prawym klawiszem myszy, przesuwa kursor w to miejsce
+EnhanceHomeKey=Rozszerzony klawisz home|Rozszerzona funkcjonalnoœæ klawisza home, podobna do Visual Studio
+HideShowScrollbars=Ukrywaj paski przewijania|Je¿eli w³¹czone, paski przewiajnia bêd¹ pokazywane tylko, gdy to bêdzie niezbêdene
+DisableScrollArrows=Wy³¹cza strza³ki przewijania|Wy³acza strza³eczki gdy nie mo¿esz przewin¹æ ju¿ dokumentu
+ShowSpecialChars=Pokazuj znaki specjalne|Pokazuje znaki koñca linii, spacje i tabulatory u¿ywaj¹c specjalnych symboli
+UndoAfterSave=Cofnij po zapisaniu pliku
+ViewUsageHints=&Podpowiedzi dotycz¹ce sk³adni poleceñ
+
+Caret=Kursor
+InsertCaret=Kursor wstawiania:
+OverwriteCaret=Kursor nadpisywania:
+VerticalLine=Pionowa linia
+HorizontalLine=Pozioma linia
+HalfBlock=Po³owa bloku
+Block=Blok
+
+; Options window Editor Highlighter Page
+UseHighlighter=&U¿ywaj podœwietlania sk³adni
+Element= Element
+TextAttri=&Atrybuty czcionki
+Color=Kolory:
+Foreground=Kolor czcionki
+Background=Kolor t³a
+FontStyle=Styl czcionki
+Bold=Pogrubiony
+Italic=Kursywa
+Underline=Podkreœlenie
+HighlightVarsInsideStrings=&Podœwietlaj nazwy zmiennych w skrypcie
+
+; Options window compiler options Page
+Paths=Œcie¿ki
+Compiler=&Kompilator:
+Help=&Pomoc:
+Options=Opcje
+NoConfigFile=Wy³¹cz wliczanie pliku konfiguracyjnego (nsisconf.nsh).
+NoConsole="%s" nie jest prawid³ow¹ aplikacj¹ konsolow¹.
+NOCD=&Wy³¹cz zmianê bierz¹cego folderu podczas kompilacji plików .nsi
+Simbols=&Symbole
+SimbolColumn=Symbol
+ValueColumn=Wartoœæ
+AddSimbol=Dodaj
+EditSimbol=Edycja
+DeleteSimbol=Usuñ
+EditSimbolCaption=Edytuj symbol
+Simbol=&Symbol:
+Value=&Wartoœæ:
+DuplicateSymbol=Powtórzona nazwa symbolu
+
+; Options window plugins config page
+n_PluginConfig=&Configure
+n_PluginAbout=&About
+
+; Code templates
+CodeTemplateCaption=Edytuj szablony
+TemplateNames=Nazwa szablonu
+NewTemplate=Nowy szablon
+EditTemplatePrompt=&Wpisz nazwê szablonu:
+EditTemplate=Edytuj szablon
+AutoCompleteShortCut=&Skrót autouzupe³niania
+TemplateCode=Szablony
+DuplicateTemplateName=Szablon o nazwie "%s" ju¿ istnieje
+
+; Welcome window
+EmptyScript=Utwórz n&owy pusty skrypt
+WizardScript=Utwórz nowy skrypt przy pomocy &Kreatora Skryptów
+OpenExistingFile=Otwórz &istniej¹cy skrypt
+MoreFiles=Wiêcej plików...
+NoShowSartup=&Nie pokazuj wiêcej tego okna
+OpenFile=Otwórz plik
+
+; Filter editor
+EditFilterCaption=Edytuj filtr
+FilterDescription=Opis filtru:
+Filter=Filtr:
+AddFilter=&Dodaj
+RemoveFilter=&Usuñ
+
+
+; Messages
+FileModified=Inna aplikacja zmieni³a zawartoœc pliku "%s" Czy chcesz go za³adowaæ ponownie?
+NoCompiler=Przed kompilacj¹ skryptu proszê wska¿ kompilator NSIS
+NoDocs=Przed pokazaniem dokumentacji NSIS proszê wska¿ plik pomocy NSIS
+OpenFileError=Nie mogê otworzyæ pliku %s
+NoCloseCompiling=Nie mo¿na zamkn¹æ programu podczas kompilacji skryptu
+Untitled=Bez nazwy %.2d
+EditTextCaption=Edytuj tekst
+EditListitemsCaption=Edytuj elementy listy
+
+
+; -------- WIZARD -----------
+EditFile=Edytuj wpis pliku
+EditFileCaption=Edytuj wpis pliku
+EditGroup=Edytuj grupê
+EditLink=Edytuj skrót
+EditLinkCaption=Edytuj skrót
+FileColumn=Plik
+FilelLnkColumn=Skrót
+FilesSubTitle=Okreœl pliki bêd¹ce czêœci¹ aplikacji
+FilesTitle=Pliki aplikacji
+AddFiles=&Dodaj plik
+AddLink=Nowy skrót
+AppInfoSubTitle=Podaj trochê podstawowych informacji na temat twojego programu.
+AppInfoTitle=Informacje o aplikacji
+AppName=&Nazwa aplikacji:
+AppPublisher=&Wydawca aplikacji:
+AppVersion=Wersja aplikacji:
+AppWeb=Strona www aplikacji:
+ChangeInstallDir=Pozwól u¿ytkownikowi zmieniæ folder aplikacji
+ChangeStartMenuDir=Pozwól u¿ytkownikowi zmieniæ nazwê folderu w Menu Start
+ComponentText=Zaznacz komponenty które chcesz zainstalowaæ i odznacz te których nie chcesz zainstalowaæ:
+CompScript=&Kompiluj skrypt
+Compress=&Kompresja:
+CompressBZip2=bzip2
+CompressNone=brak
+CompressZLib=zlib
+CompressLZMA=LZMA
+ConfigCaption=Konfiguracja
+CreateUninstallIcon=Utwórz ikonê &Deinstalatora w Menu Start
+CreateWebIcon=Uwórz skrót do Strony &internetowej w Menu Start
+DefaultAppName=Moja aplikacja
+DefaultAppPublisher=Moja firma
+DefaultAppVersion=1.0
+DefaultAppWeb=http://www.mojastrona.pl
+DefaultCompress=zlib
+DefaultExeInst=Setup.exe
+DefaultGUI=Nowoczesny
+DefaultGroup=GrupaGlowna
+DefaultInstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico
+DefaultLFS=Klasyczny przycisk
+DefaultLangInst=Polish
+DefaultUninstPrompt=Czy na pewno chcesz usun¹æ program [NAME] i wszystkie jego komponenty?
+DefaultUninstSuccesMsg=Program [NAME] zosta³ pomyœlnie usuniêty.
+DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
+DefaultWizardFiles=${NSISDIR}\makensis.exe|$INSTDIR;${NSISDIR}\License.txt|$INSTDIR
+DefaultWizardLicFile=${NSISDIR}\License.txt
+DefaultWizardSections=GrupaGlowna
+DeleteFile=&Usuñ plik
+DeleteGroup=Usuñ grupê
+DeleteLink=Usuñ skrót
+Description=&Opis
+Dest=&Przeznaczenie:
+DirDest=&Folder docelowy:
+DirDestColumn=Folder docelowy
+DirText=Instalator zainstaluje [NAME] w poni¿szym folderze.$\r$\n$\r$\n¯eby zainstalowaæ program w innym folderze, kliknij Przegl¹daj i wybierz inny folder.
+ExeInst=&Plik instalatora:
+ExecFinishSubTitle=Okreœl pliki do uruchomienia po zakoñczeniu pracy Instalatora
+ExecFinishTitle=Uruchom po instalacji
+ExecProgram=&Program:
+ExecProgramParams=P&arametry:
+ExecReadme=Plik &Readme:
+ExitWizardPrompt=Kreator nie dokoñczy³ swojej pracy. Je¿eli wyjdziesz teraz, nowy skrypt nie zostanie wygenerowany.$nl$nlWyjœæ z Kreatora skryptów NSIS?
+FinishLabel1=Kreator zakoñczy³ pracê
+FinishLabel2=Praca Kreatora zakoñczy³a siê sukcesem.
+FinishLabel3=Aby zakoñczyæ pracê tego Kreatora i utworzyæ nowy skrypt kliknij Zakoñcz.
+GUI=Interfejs:
+GUIClassic=Klasyczny
+GUIModern=Nowoczesny
+GUINone=Brak
+IconsSubTitle=Okreœl które skróty powinny zostaæ stworzone dla twojego programu.
+IconsTitle=Ikony aplikacji
+IfFileExists=&Je¿eli plik istnieje
+InsertFileCaption=Wstaw nazwê pliku
+InstallDir=&Domyœlny folder aplikacji:
+InstallIcon=&Ikona instalatora:
+LFSCheckBox=Pole wyboru
+LFSRadioButtons=Pole opcji
+LangInst=&Jêzyk instalatora:
+LicenceFile=&Plik licencji
+LicenceSubTitle=Okreœl proszê folder i informacje o licencji Twojego programu.
+LicenceTitle=Folder aplikacji i licencja
+LicenseForceSelection=Wybierz w jaki sposób u¿ytkownik bêdzie akceptowa³ licencje
+LicenseText=Je¿eli akceptujesz wszystkie warunki licencji, wybierz Zgadzam siê ¿eby kontynuowaæ. Musisz zakceptowaæ licencjê ¿eby zainstalowaæ [NAME] 
+LinkDestColumn=Plik przeznaczenia
+ModifyName=Zmieñ nazwê
+ModifyNamePrompt=Wpisz zatem nazwê grupy:
+NewFile=Nowy plik
+NewFileCaption=Nowy plik
+NewGroup=Nowa grupa
+NewGroupPrompt=Wpisz zatem nazwê grupy
+NoAppName=Okreœl nazwê aplikacji.
+NoCompress=Okreœl typ kompresji
+NoDir=Okreœl folder domyœlny.
+NoExeInst=Okreœl nazwê pliku instalatora.
+NoFoundText=Nie mo¿na odnaleŸæ "%s".
+NoGUI=Okreœl typ interfejsu.
+NoLFS=Klasyczny przycisk
+NoLang=Okreœl jêzyk instalatora.
+NoLinkName=Okreœl nazwê skrótu.
+NoSymbolName=Okreœl nazwê symbolu
+NoSymbolSpaces=Nie u¿ywaj spacji w nazwach symboli
+NoValidIOControl="%s" nie jest prawid³ow¹ kontrolk¹ InstallOptions
+NoValidIOIni="%s" nie jest prawid³owym plikiem InstallOptions
+NoVersion=Okreœl wersje aplikacji.
+OptionsSubTitle=Okreœl opcje instalatora.
+OptionsTitle=Opcje instalatora
+OrgDile=&Plik Ÿród³owy:
+OverwriteIfNewer=Nadpisz gdy nowszy
+OverwriteOff=Nigdy nie nadpisuj
+OverwriteOn=Zawsze nadpiduj
+OverwriteTry=Próbuj nadpisaæ
+RelativePaths=&Konwertuj nazwy plików na wzglêdne
+SaveChanges=Czy chcesz zapisaæ zmiany w pliku "%s"?
+SaveScript=&Zapisz skrypt
+SelectInstallComponents=&Pozwól wybraæ komponenenty do zainstalowania
+SelectModeMenu=Tryb zaznaczania
+ShortCut=&Skrót:
+StartMenuDir=Folder w Menu Start dla aplikacji
+StartupCaption=Witaj
+UninstPrompt=&Pytanie deinstalatora:
+UninstSuccesMsg=Komunikat powodzenia Deinstalatora:
+UninstallIcon=Ikona deinstalatora:
+UninstallSubTitle=Okreœl atrybuty deinstalatora.
+UninstallTitle=Deinstalator
+UseUninstaller=U¿ywaj &deinstalatora
+WelcomeLabel1=Witaj w Kreatorze Skryptów NSIS
+WelcomeLabel2=Ten kreator przeprowadzi Ciê przez proces tworzenia nowego pliku skryptowego NSIS. Wynik mo¿e zostaæ skomilowany lub zachowany na dysku do póŸniejszego u¿ycia.
+WelcomeLabel3=Nie wszystkie mo¿liwoœci Nullsoft Install System s¹ obs³ugiwane przez Kreatora. Zobacz dokumentacjê aby dowiedzieæ siê wiêcej o tworzeniu skryptów Nullsoft Install System.
+WelcomeLabel4=Kliknij Dalej aby kontynuowaæ lub anuluj ¿eby zamkn¹æ tego Kreatora
+WizardCaption=Kreator Skryptów NSIS
