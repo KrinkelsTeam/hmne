@@ -14,12 +14,7 @@
 
 !include "MUI.nsh"
 
-!ifdef COMP_WITH_BZIP2
-  SetCompressor bzip2
-  
-  !insertmacro MUI_RESERVEFILE_INSTALLOPTIONS
-  !insertmacro MUI_RESERVEFILE_LANGDLL
-!endif
+SetCompressor lzma
 
  ########## MUI Settings ##########
 !define MUI_ABORTWARNING
@@ -54,6 +49,7 @@
 !insertmacro MUI_LANGUAGE "Ukrainian"
 !insertmacro MUI_LANGUAGE "PortugueseBR"
 !insertmacro MUI_LANGUAGE "Korean"
+!insertmacro MUI_LANGUAGE "Hungarian"
 
 ;-------------------------------------------------------------------------
 ; Undef this if you dont have UPX upx.sourceforge.net
@@ -85,6 +81,7 @@ LangString LANGFILE ${LANG_SIMPCHINESE} "Chinese_Simplified"
 LangString LANGFILE ${LANG_UKRAINIAN} "Ukrainian"
 LangString LANGFILE ${LANG_PORTUGUESEBR} "Portuguese_Brazil"
 LangString LANGFILE ${LANG_KOREAN} "Korean"
+LangString LANGFILE ${LANG_HUNGARIAN} "Hungarian"
 
 ;--------------------------------------------------------------
 
@@ -163,6 +160,7 @@ Section "-" SEC01
   File "Lang\Ukrainian.lng"
   File "Lang\Portuguese_Brazil.lng"
   File "Lang\Korean.lng"
+  File "Lang\Hungarian.lng"
 
   ; Configuration files
   SetOutPath "$INSTDIR\Config"
@@ -262,6 +260,7 @@ Section Uninstall
   Delete "$INSTDIR\Lang\Ukrainian.lng"
   Delete "$INSTDIR\Lang\Portuguese_Brazil.lng"
   Delete "$INSTDIR\Lang\Korean.lng"
+  Delete "$INSTDIR\Lang\Hungarian.lng"
 
   Delete "$INSTDIR\Plugins\ExDll\Delphi\hmne_sample.dpr"
   Delete "$INSTDIR\Plugins\ExDll\Delphi\hmne_sample.dof"
