@@ -1,4 +1,4 @@
-; HM NIS EDIT 2.0b4 hungarian messages.
+; HM NIS EDIT 2.0b5 hungarian messages.
 
 ; Translator: gLes <gLes@hab.hu>
 ; Translator URL: http://web.axelero.hu/gles6
@@ -176,9 +176,9 @@ LicFileFilter=Licenc fájlok (*.rtf, *.txt)|*.rtf;*.txt
 NSHFileFilter=NSIS fejléc fájlok (*.nsh)|*.nsh
 RTFFileFilter=RichText fájlok (*.rtf)|*.rtf
 TextFileFilter=Egyszerû szövegfájlok (*.txt)|*.txt
-CHMFileFilter=CHM files (*.chm)|*.chm
-HelpFileFilter=Help files (*.chm, *.html)|*.chm;*.html
-TeXFileFilter=TeX Files (*.tex)|*.tex
+CHMFileFilter=CHM fájlok (*.chm)|*.chm
+HelpFileFilter=Súgó fájlok (*.chm, *.html)|*.chm;*.html
+TeXFileFilter=TeX fájlok (*.tex)|*.tex
 
 ; Message boxes
 ErrorDlgCaption=Hiba
@@ -407,7 +407,6 @@ Compress=&Tömörítés:
 CompressBZip2=bzip2
 CompressNone=Nincs
 CompressZLib=zlib
-CompressLZMA=LZMA
 ConfigCaption=Konfiguráció
 CreateUninstallIcon=&Eltávolítás ikon létrehozása a Start menüben
 CreateWebIcon=Internet-parancsikon létrehozása a Start menüben
@@ -425,8 +424,8 @@ DefaultLangInst=Hungarian
 DefaultUninstPrompt=Biztosan teljesen el szeretné távolítani a(z) [NAME]-t és az annak összes összetevõjét?
 DefaultUninstSuccesMsg=A(z) [NAME] sikeresen el lett távolítva a számítógépérõl.
 DefaultUninstallIcon=${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico
-DefaultWizardFiles=c:\path\to\file\AppMainExe.exe|$INSTDIR;c:\path\to\file\Example.file|$INSTDIR
-DefaultWizardLicFile=c:\path\to\licence\YourSoftwareLicence.txt
+DefaultWizardFiles=c:\útvonal\Fõprogram.exe|$INSTDIR;c:\útvonal\Példa.fájl|$INSTDIR
+DefaultWizardLicFile=c:\licencútvonala\Azénszoftverlicencem.txt
 DefaultWizardSections=MainSection
 DeleteFile=&Fájl eltávolítása
 DeleteGroup=Csoport eltávolítása
